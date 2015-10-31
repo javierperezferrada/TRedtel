@@ -1,25 +1,32 @@
 {% extends "base.html" %}
- 
+
 {% block body %}
     {% if form.errors %}
         <p>Tu nombre de usuario y contraseña no coinciden. Por favor intenta nuevamente.</p>
     {% endif %}
- 
-    <form method="post" action="{% url 'django.contrib.auth.views.login' %}">
+
+    <div class="container">
+    <form method="post" class="form-signin" action="{% url 'django.contrib.auth.views.login' %}">
         {% csrf_token %}
-        <table>
-            <tr>
-                <td>Nombre</td>
-                <td>{{ form.username }}</td>
-            </tr>
-            <tr>
-                <td>Contraseña</td>
-                <td>{{ form.password }}</td>
-            </tr>
-        </table>
- 
-        <input type="submit" value="login"/> 
+        <h2 class="form-signin-heading">Login</h2>
+        {% if next %}
+            <input type="hidden" name="next" value="{{ next }}" />
+        {% endif %}
+        <div class="control-group">
+            <label class="control-label" for="username">Usuario</label>
+            <div class="controls">
+                <input type="text" id="username" name="username"  placeholder="Username">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="password">Contraseña</label>
+            <div class="controls">
+                <input type="password" name="password" id="password" placeholder="Password">
+            </div>
+        </div>
+
+        <input type="submit" value="login"/>
         <input type="hidden" name="next" value="{{ next }}">
     </form>
- 
+</div>
 {% endblock %}
