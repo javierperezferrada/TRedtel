@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+ 
+{% block body %}
+ 
+    <table>
+        <tr>
+            <td>Bienvenido</td>
+            <td>{{ user.username }}</td>
+        </tr>
+ 
+        <tr>
+            <td>Tu correo registrado es:</td>
+            <td>{{ user.email }}</td>
+        </tr>
+ 
+        <tr>
+            <td>{{ user.first_name.label_tag }}</td>
+            <td>{{ user.first_name }}</td>
+        </tr>
+ 
+        <tr>
+            <td>{{ user.last_name.label_tag }}</td>
+            <td>{{ user.last_name }}</td>
+        </tr>
+ 
+        <tr>
+            <td>ingresado con fecha</td>
+            <td>{{ user.date_joined }}</td>
+        </tr>
+ 
+        <tr>
+            <td>Ultimo ingreso al sistema</td>
+            <td>{{ user.last_login }}</td>
+        </tr>
+ 
+    </table>
+ 
+    <a href="{% url 'logout' %}">Salir</a>
+ 
+ 
+{% endblock %}
