@@ -17,3 +17,11 @@ def index(request):
 @login_required()
 def home(request):
     return render_to_response('home.html', {'user': request.user}, context_instance=RequestContext(request))
+
+@login_required()
+def administrador(request):
+	return render_to_response('admin.html')
+
+@login_required()
+def cargar_usuarios(request):
+	return render_to_response('c_usuarios.html')
