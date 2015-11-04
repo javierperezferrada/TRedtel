@@ -16,6 +16,9 @@ def index(request):
 def home(request):
     return render_to_response('home.html', {'user': request.user}, context_instance=RequestContext(request))
 
+@login_required()
+def mis_datos(request):
+	return render_to_response('mis_datos.html')
 
 @permission_required('portal.puede_cargar', login_url="/ingresar") 
 def administrador(request):

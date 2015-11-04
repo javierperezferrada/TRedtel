@@ -1,6 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from django.db import models
+
+#----------------------------------------------------
+# Clases propuestas por el cliente.
+#----------------------------------------------------
 class Cargo(models.Model):
 	nombre = models.CharField(max_length=30)
 
@@ -15,6 +19,10 @@ class Area(models.Model):
 
 class CentroCosto(models.Model):
 	nombre = models.CharField(max_length=30)
+
+#----------------------------------------------------
+# Fin Clases propuestas por el cliente.
+#----------------------------------------------------
 
 class Liquidacion(models.Model):
 	rut_trabajador = models.CharField(max_length=12)
@@ -46,3 +54,5 @@ class Trabajador(models.Model):
 	id_area = models.ForeignKey(Area) 
 	id_ccosto = models.ForeignKey(CentroCosto) 
 	vencimiento_lic_conducir = models.DateField()
+
+

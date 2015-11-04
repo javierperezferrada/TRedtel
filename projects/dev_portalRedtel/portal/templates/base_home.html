@@ -1,16 +1,16 @@
 {% extends 'base.html' %}
  
 {% block body %}
- 
     <header>
         <div class="app-bar">
-            <a class="app-bar-element" href="home/mis_datos">Mis datos</a>
-            <span class="app-bar-divider"></span>
-            <a class="app-bar-element" href="home/liquidaciones">Mis Liquidaciones</a>
+            <a class="app-bar-element" href="home/mis_datos">Datos Personales</a>
             <span class="app-bar-divider"></span>
             <ul class="app-bar-menu">
-                <li><a href=""></a></li>
+                <li><a href="liquidaciones">Mis Liquidaciones</a></li>
+                <span class="app-bar-divider"></span>
+                <li><a href="antiguedad">Mis Certificados</a></li>
             </ul>
+            <span class="app-bar-divider"></span>
             <div class="app-bar-element place-right">
                 <a class="fg-white" href="{% url 'logout' %}">
                     <span class="mif-exit"></span> Salir
@@ -20,9 +20,8 @@
         </div>
     </header>
 
-    Bienvenido {{ user.first_name }}&nbsp{{ user.last_name }}
 
+    {% block seccion %}
+    {% endblock %}
 
-
- 
 {% endblock %}
