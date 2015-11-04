@@ -2,6 +2,10 @@
 # -*- coding: utf-8 -*-
 from django.db import models
 
+class Usuario(models.Model):
+	nombre = models.CharField(max_length=20)
+	rut = models.CharField(max_length=20)
+
 #----------------------------------------------------
 # Clases propuestas por el cliente.
 #----------------------------------------------------

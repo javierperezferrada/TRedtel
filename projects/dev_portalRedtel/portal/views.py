@@ -7,6 +7,7 @@ from django.http.response import HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.template.context import RequestContext
 from django.contrib.auth.decorators import login_required,permission_required
+from .models import Usuario
 
 
 def index(request):
@@ -18,14 +19,15 @@ def home(request):
 
 @login_required()
 def mis_datos(request):
-	return render_to_response('mis_datos.html')
+	usuario = get_object_or_404(Usuario, pk=1)
+	return render_to_response('mis_datos.html', {'usuario': usuario}, context_instance=RequestContext(request))
 
 @permission_required('portal.puede_cargar', login_url="/ingresar") 
 def administrador(request):
-	return render_to_response('admin.html')
+	return render_to_response('admin.html', context_instance=RequestContext(request))
 
 
 
 @permission_required('portal.puede_cargar', login_url="/ingresar")  
 def cargar_usuarios(request):
-	return render_to_response('c_usuarios.html')
+	return render_to_response('c_usuarios.html', context_instance=RequestContext(request))
