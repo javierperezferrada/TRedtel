@@ -8,6 +8,8 @@ from django.shortcuts import render_to_response
 from django.template.context import RequestContext
 from django.contrib.auth.decorators import login_required,permission_required
 from .models import Usuario
+from .models import Liquidacion
+from django.contrib import messages
 
 
 def index(request):
@@ -19,8 +21,14 @@ def home(request):
 
 @login_required()
 def mis_datos(request):
-	usuario = get_object_or_404(Usuario, pk=1)
+	usuario = get_object_or_404(Usuario, nombre=request.user.username)
 	return render_to_response('mis_datos.html', {'usuario': usuario}, context_instance=RequestContext(request))
+
+@login_required()
+def mis_liquidaciones(request):
+	usuario = get_object_or_404(Usuario, nombre=request.user.username)
+	liquidacion = get_object_or_404(Liquidacion, rut_trabajador=usuario.rut)
+	return render_to_response('mis_liquidaciones.html', {'usuario': usuario}, context_instance=RequestContext(request))
 
 @permission_required('portal.puede_cargar', login_url="/ingresar") 
 def administrador(request):
