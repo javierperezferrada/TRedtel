@@ -17,7 +17,7 @@ def index(request):
 
 @login_required()
 def home(request):
-    return render_to_response('home.html', {'user': request.user}, context_instance=RequestContext(request))
+   return render_to_response('home.html', {'user': request.user}, context_instance=RequestContext(request))
 
 @login_required()
 def mis_datos(request):
@@ -31,11 +31,11 @@ def mis_liquidaciones(request):
 	return render_to_response('mis_liquidaciones.html', {'usuario': usuario}, context_instance=RequestContext(request))
 
 @permission_required('portal.puede_cargar', login_url="/ingresar") 
-def administrador(request):
-	return render_to_response('admin.html', context_instance=RequestContext(request))
+def cargar_usuarios(request):
+	return render_to_response('cargar_usuarios.html', context_instance=RequestContext(request))
 
 
 
 @permission_required('portal.puede_cargar', login_url="/ingresar")  
-def cargar_usuarios(request):
-	return render_to_response('c_usuarios.html', context_instance=RequestContext(request))
+def cargar_liquidaciones(request):
+	return render_to_response('cargar_liquidaciones.html', context_instance=RequestContext(request))

@@ -8,6 +8,12 @@
             <span class="app-bar-divider"></span>
             <a class="app-bar-element" href="/home/mis_liquidaciones">Mis Liquidaciones</a>
             <span class="app-bar-divider"></span>
+            {% if perms.portal.es_administrador %} 
+                <a class="app-bar-element" href="/home/cargar_usuarios">Cargar Usuarios</a>
+                <span class="app-bar-divider"></span>
+                <a class="app-bar-element" href="/home/cargar_liquidaciones">Cargar Liquidaciones</a>
+                <span class="app-bar-divider"></span>
+            {% endif %} 
             <ul class="app-bar-menu">
                 <li><a href=""></a></li>
             </ul>
@@ -21,6 +27,8 @@
     </header>
 
     Bienvenido {{ user.first_name }}&nbsp{{ user.last_name }}
+
+
 
     {% block seccion %}
     {% endblock %}
