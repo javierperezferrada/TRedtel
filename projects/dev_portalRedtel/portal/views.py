@@ -9,7 +9,9 @@ from django.template.context import RequestContext
 from django.contrib.auth.decorators import login_required,permission_required
 from .models import Usuario
 from .models import Liquidacion
+from .models import Palabra
 from django.contrib import messages
+import csv
 
 
 def index(request):
@@ -34,8 +36,17 @@ def mis_liquidaciones(request):
 def cargar_usuarios(request):
 	return render_to_response('cargar_usuarios.html', context_instance=RequestContext(request))
 
-
-
 @permission_required('portal.puede_cargar', login_url="/ingresar")  
 def cargar_liquidaciones(request):
 	return render_to_response('cargar_liquidaciones.html', context_instance=RequestContext(request))
+
+def load_info(request):
+	reader = csv.reader(open("info.csv"))
+	for row in reader:
+		palabras = Palabra()
+		palabras.id = row[0]
+		palabras.tipo = row[1]
+		palabras.palabra1 = row[2]
+		palabras.palabra2 = row[3]
+		palabras.save()
+	return HttpResponseRedirect('/')

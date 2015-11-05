@@ -2,6 +2,13 @@
 # -*- coding: utf-8 -*-
 from django.db import models
 
+#clase de prueba carga de csv
+class Palabra(models.Model):
+	tipo = models.CharField(max_length=20)
+	palabra1 = models.CharField(max_length=20)
+	palabra2 = models.CharField(max_length=20)
+#fin clase de prueba
+
 class Usuario(models.Model):
 	nombre = models.CharField(max_length=20)
 	rut = models.CharField(max_length=20)
