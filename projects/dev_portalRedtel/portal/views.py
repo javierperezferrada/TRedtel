@@ -39,16 +39,14 @@ def cargar_usuarios(request):
     if request.method == 'POST':
         form = UploadFileForm(request.POST, request.FILES)
         if form.is_valid():
-            newdoc = Document(docfile = request.FILES['docfile'])
-            newdoc.save()
             reader = csv.reader(request.FILES['docfile'])
             for row in reader:
-                palabras = Palabra()
-                palabras.id = row[0]
-                palabras.tipo = row[1]
-                palabras.palabra1 = row[2]
-                palabras.palabra2 = row[3]
-                palabras.save()
+            	user = User.objects.create_user(username=row[1],password=row[3]) 
+                usuarios = Usuario()
+                usuarios.id = row[0]
+                usuarios.nombre = row[1]
+                usuarios.rut = row[2]
+                usuarios.save()
             return HttpResponseRedirect('/')
     else:
         form = UploadFileForm()
@@ -58,14 +56,4 @@ def cargar_usuarios(request):
 def cargar_liquidaciones(request):
 	return render_to_response('cargar_liquidaciones.html', context_instance=RequestContext(request))
 
-def load_info(request):
-	reader = csv.reader(open("info.csv"))
-	for row in reader:
-		palabras = Palabra()
-		palabras.id = row[0]
-		palabras.tipo = row[1]
-		palabras.palabra1 = row[2]
-		palabras.palabra2 = row[3]
-		palabras.save()
-	return HttpResponseRedirect('/')
 
