@@ -106,7 +106,8 @@ STATICFILES_DIRS = (
         os.path.join(BASE_DIR,'static'),
     )
 
-MEDIA_ROOT = 'media/'
+#ruta donde guardaremos los archivos de media
+MEDIA_ROOT = 'media'
 
 
 # Redirect when login is correct.

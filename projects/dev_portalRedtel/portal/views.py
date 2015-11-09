@@ -10,8 +10,10 @@ from django.contrib.auth.decorators import login_required,permission_required
 from .models import Usuario
 from .models import Liquidacion
 from .models import Palabra
+from .models import Document
 from django.contrib import messages
 import csv
+from .forms import UploadFileForm
 
 
 def index(request):
@@ -33,8 +35,24 @@ def mis_liquidaciones(request):
 	return render_to_response('mis_liquidaciones.html', {'usuario': usuario}, context_instance=RequestContext(request))
 
 @permission_required('portal.puede_cargar', login_url="/ingresar") 
-def cargar_usuarios(request):
-	return render_to_response('cargar_usuarios.html', context_instance=RequestContext(request))
+def cargar_usuarios(request):	
+    if request.method == 'POST':
+        form = UploadFileForm(request.POST, request.FILES)
+        if form.is_valid():
+            newdoc = Document(docfile = request.FILES['docfile'])
+            newdoc.save()
+            reader = csv.reader(request.FILES['docfile'])
+            for row in reader:
+                palabras = Palabra()
+                palabras.id = row[0]
+                palabras.tipo = row[1]
+                palabras.palabra1 = row[2]
+                palabras.palabra2 = row[3]
+                palabras.save()
+            return HttpResponseRedirect('/')
+    else:
+        form = UploadFileForm()
+    return render_to_response('cargar_usuarios.html', {'form': form}, context_instance=RequestContext(request))
 
 @permission_required('portal.puede_cargar', login_url="/ingresar")  
 def cargar_liquidaciones(request):
@@ -50,3 +68,4 @@ def load_info(request):
 		palabras.palabra2 = row[3]
 		palabras.save()
 	return HttpResponseRedirect('/')
+

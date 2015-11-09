@@ -4,10 +4,23 @@
  
 {% block seccion %}
 <h1>Cargar Usuarios</h1>
-<div class='container'>
+<div class='container'>	
+	<p>Interfaz de carga de usuarios.</p>
+	{% if form.errors %} 
+    <p style="color: red;">Por favor corrige lo siguiente: 
+    </p> 
+{% endif %} 
+    <form action="" method="post" enctype="multipart/form-data">{% csrf_token %} 
+        <table> 
+            {{ form.as_table }} 
+        </table> 
+        <input type="submit" value="Cargar"> 
+    </form> 
+
+
 
 </div>
-<a href="cargar">Cargar</a>
+
 
 
 {% endblock %}
