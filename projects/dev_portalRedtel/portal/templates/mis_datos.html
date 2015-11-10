@@ -4,18 +4,32 @@
  
 {% block seccion %}
 
+
+
 <div class='container'>
-	<h1>{{ usuario.nombre }}</h1>
-	<p>{{ usuario.rut }}</p>
-
-	{% if messages %} 
-<ul> 
-    {% for message in messages %} 
-    <li>{{ message }}</li> 
-    {% endfor %} 
-</ul> 
-{% endif %} 
-
+	<table class='table'>
+		<tr>
+			<td>email:</td>
+			<td>{{ user.email }}</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>rut:</td>
+			<td>{{ usuario.rut }}</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Fecha ingreso:</td>
+			<td>{{ usuario.fecha_ingreso }}</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Vencimiento licencia de conducir:</td>
+			<td>{{ usuario.vencimiento_licencia_conducir }}</td>
+			<td></td>
+		</tr>
+	</table>
+	<a href="obtener_certificado"><h3>Obtener Certificado de antigüedad</h3></a>
 </div>
 
 

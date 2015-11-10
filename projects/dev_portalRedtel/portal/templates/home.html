@@ -26,9 +26,15 @@
         </div>
     </header>
 
-    Bienvenido {{ user.first_name }}&nbsp{{ user.last_name }}
+    Bienvenido {{ user.get_full_name }}
 
-
+    {% if messages %} 
+<ul> 
+    {% for message in messages %} 
+    <li>{{ message }}</li> 
+    {% endfor %} 
+</ul> 
+{% endif %} 
 
     {% block seccion %}
     {% endblock %}

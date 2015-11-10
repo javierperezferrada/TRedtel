@@ -5,10 +5,32 @@
 
 {% block seccion %}
 
-<div class='container'>
-	<h1>Mis Liquidaciones de sueldo.</h1>
-	<h1></h1>
-</div>
 
+<div class='container'>
+	<h3>Última Liquidacion</h3>
+	<table class='table'>
+		<tr>
+			<td>Sueldo del mes:</td>
+			<td>{{ liquidacion.sueldo }}</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Gratificacion:</td>
+			<td>{{ liquidacion.gratificacion }}</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>AFP:</td>
+			<td>{{ liquidacion.afp }}</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Anticipo:</td>
+			<td>{{ liquidacion.anticipo }}</td>
+			<td></td>
+		</tr>
+	</table>
+</div>
+	<a href="copias_liquidaciones"><h3>Obtener Copias de mis liquidaciones</h3></a>
 
 {% endblock %}
