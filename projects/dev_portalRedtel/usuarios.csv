@@ -9,4 +9,3 @@ id,username,first_name,last_name,email,password,is_staff,rut,fecha_ingreso(yyyy-
 10,jperez,javier,perez,jperez@redtelingenieria.cl,123,,12345678-2,2015-01-08,1,1,1,1,2020-01-08,1
 11,lvidal,leon,vidal,lvidal@redtelingeniaria.cl,123,,12345678-1,2015-01-09,1,1,1,1,2020-01-09,1
 30,hcasanova,hernan,casanova,hcasanova@redtelingenieria,123,,123456780,2015-01-10,1,1,1,1,2020-01-10,1
-31,admin,administrador,portal,admin@redtelingenieraia.cl,123,,123456781,2015-01-11,1,1,1,1,2020-01-11,1

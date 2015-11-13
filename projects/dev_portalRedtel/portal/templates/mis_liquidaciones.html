@@ -10,27 +10,38 @@
 	<h3>Última Liquidacion</h3>
 	<table class='table'>
 		<tr>
+			<td>Mes:</td>
+			<td>{{ qs.mes }}</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Año:</td>
+			<td>{{ qs.ano }}</td>
+			<td></td>
+		</tr>
+		<tr>
 			<td>Sueldo del mes:</td>
-			<td>{{ liquidacion.sueldo }}</td>
+			<td>{{ qs.sueldo }}</td>
 			<td></td>
 		</tr>
 		<tr>
 			<td>Gratificacion:</td>
-			<td>{{ liquidacion.gratificacion }}</td>
+			<td>{{ qs.gratificacion }}</td>
 			<td></td>
 		</tr>
 		<tr>
 			<td>AFP:</td>
-			<td>{{ liquidacion.afp }}</td>
+			<td>{{ qs.afp }}</td>
 			<td></td>
 		</tr>
 		<tr>
 			<td>Anticipo:</td>
-			<td>{{ liquidacion.anticipo }}</td>
-			<td></td>
+			<td>{{ qs.anticipo }}</td>
+			<td><a href="imprimir_ultima">Imprimir última liquidación.</a></td>
 		</tr>
 	</table>
 </div>
+
 	<a href="copias_liquidaciones"><h3>Obtener Copias de mis liquidaciones</h3></a>
 
 {% endblock %}
