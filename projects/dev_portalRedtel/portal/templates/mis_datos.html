@@ -7,28 +7,30 @@
 
 
 <div class='container'>
-	<table class='table'>
-		<tr>
-			<td>email:</td>
-			<td>{{ user.email }}</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>rut:</td>
-			<td>{{ usuario.rut }}</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>Fecha ingreso:</td>
-			<td>{{ usuario.fecha_ingreso }}</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>Vencimiento licencia de conducir:</td>
-			<td>{{ usuario.vencimiento_licencia_conducir }}</td>
-			<td></td>
-		</tr>
-	</table>
+	<table class="table hovered" id='encabezado_liquidacion'>
+	<tr>
+		<td>NOMBRE</td> <td>{{user.username}}</td><td></td><td></td>
+		<td>RUT</td> <td>{{usuario.rut}}</td>
+	</tr>
+	<tr>
+		<td>C.COSTO</td> <td>{{usuario.CCosto}}</td><td></td><td></td>
+		<td>AREA</td> <td>{{usuario.zonal}}</td>
+	</tr>
+	<tr>
+		<td>CARGO</td> <td>{{usuario.cargo}}</td><td></td><td></td>
+		<td>FECHA ING</td> <td>{{usuario.fecha_ingreso}}</td>
+	</tr>
+	<tr>
+		<td>AFP</td> <td>{{usuario.Afp}}</td><td></td><td></td>
+		<td>SALUD</td> <td>{{usuario.Salud}}</td>
+	</tr>
+	<tr>
+		
+		<td>VENC. LIC. COND.</td> <td>{{usuario.vencimiento_licencia_conducir}}</td>
+	</tr>
+	
+</table>
+	
 	<a href="obtener_certificado"><h3>Obtener Certificado de antigüedad</h3></a>
 </div>
 

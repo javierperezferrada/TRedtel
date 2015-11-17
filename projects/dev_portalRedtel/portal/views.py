@@ -37,9 +37,34 @@ def obtener_certificado(request):
 @login_required()
 def mis_liquidaciones(request):
     usuario = get_object_or_404(Usuario, id=request.user.id)
-    qs = Liquidacion.objects.filter(Usuario_rut=usuario.rut)
-    qs = qs.latest("mes")
-    return render_to_response('mis_liquidaciones.html', {'qs': qs}, context_instance=RequestContext(request))
+    liquidaciones = Liquidacion.objects.filter(Usuario_rut=usuario.rut)
+    return render_to_response('mis_liquidaciones.html', {'liquidaciones': liquidaciones}, context_instance=RequestContext(request))
+
+@login_required()
+def liq_detalle(request):
+    usuario = get_object_or_404(Usuario, id=request.user.id)
+    liquidaciones = Liquidacion.objects.filter(Usuario_rut=usuario.rut)
+    return render_to_response('mis_liquidaciones.html', {'liquidaciones': liquidaciones}, context_instance=RequestContext(request))
+
+@login_required()
+def imprimir_liquidacion(request,pk):   
+    try: 
+        liquidacion = Liquidacion.objects.get(id=pk) 
+    except ValueError: # Si no existe llamamos a "pagina no encontrada". 
+        raise Http404()  
+    response = HttpResponse(content_type='application/pdf') 
+    response['Content-Disposition'] = "attachment; filename="+str(liquidacion.mes)+"_"+str(liquidacion.ano)+".pdf"
+    buffer = BytesIO() 
+    p = canvas.Canvas(buffer) 
+    p.drawString(100, 700, "id liquidacion")
+    p.drawString(100, 800, "id liquidacion")
+    p.drawString(300, 800, str(liquidacion.id))
+    p.showPage() 
+    p.save() 
+    pdf = buffer.getvalue() 
+    buffer.close() 
+    response.write(pdf) 
+    return response
 
 @login_required()
 def imprimir_ultima(request):  
@@ -50,7 +75,7 @@ def imprimir_ultima(request):
     except ValueError: 
         raise Http404() 
     response = HttpResponse(content_type='application/pdf') 
-    response['ContentDisposition'] = 'filename="ultima_liquidacion.pdf"' 
+    response['Content-Disposition'] = 'attachment; filename="somefilename.pdf"'
     buffer = BytesIO() 
     p = canvas.Canvas(buffer) 
     p.drawString(100, 800, "Rut trabajador")
