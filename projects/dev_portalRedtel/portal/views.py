@@ -7,11 +7,17 @@ from django.http.response import HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.template.context import RequestContext
 from django.contrib.auth.decorators import login_required,permission_required
+from reportlab.pdfgen import canvas
+from reportlab.platypus import Paragraph
+from reportlab.platypus.doctemplate import SimpleDocTemplate
+from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
+from django.http import HttpResponse
 from .models import Usuario
 from .models import Liquidacion
 from django.contrib import messages
 import csv
 from .forms import UploadFileForm
+from Gen_Pdf import PdfMuestra
 
 
 def index(request):
@@ -29,13 +35,34 @@ def mis_datos(request):
 @login_required()
 def obtener_certificado(request):
     usuario = get_object_or_404(Usuario, id=request.user.id)
-    return render_to_response('obtener_certificado.html', {'usuario': usuario}, context_instance=RequestContext(request))
+    return render_to_response(PdfMuestra(request), {'usuario': usuario}, context_instance=RequestContext(request))
 
 @login_required()
 def mis_liquidaciones(request):
-	usuario = get_object_or_404(Usuario, id=request.user.id)
-	liquidacion = get_object_or_404(Liquidacion, Usuario_rut=usuario.rut)
-	return render_to_response('mis_liquidaciones.html', {'liquidacion': liquidacion}, context_instance=RequestContext(request))
+    respuesta = HttpResponse(content_type = 'application/pdf')
+    respuesta['Content-Disposition'] = 'filename = "respuesta.pdf"'
+
+    Q = SimpleDocTemplate(respuesta,rightMargin=72,leftMargin=72,topMargin=72,BottomMargin=18)
+
+
+    Story = []
+
+    styles = getSampleStyleSheet()
+
+    ptext = 'Texto de prueba.'
+
+    Story.append(Paragraph(ptext,styles["Normal"]))
+
+
+    ptext = 'Usuario en el sistema es pura shit'
+
+    Story.append(Paragraph(ptext,styles["Normal"]))
+
+    Q.build(Story)
+
+    respuesta.close()
+
+    return respuesta
 
 @login_required()
 def copias_liquidaciones(request):

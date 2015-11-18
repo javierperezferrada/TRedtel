@@ -1,17 +1,12 @@
 from reportlab.pdfgen import canvas
-from reportlab.platypus import Paragraph
-from reportlab.platypus.doctemplate import SimpleDocTemplate
+from reportlab.platypus import SimpleDocTemplate, Paragraph
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from django.http import HttpResponse
 
 def PdfMuestra(request):
 	respuesta = HttpResponse(content_type = 'application/pdf')
-	respuesta['Content-Disposition'] = 'filename = "respuesta.pdf"'
-
-	Temp = StringIO()
-
-	Q = SimpleDocTemplate(Temp,rightMargin=72,leftMargin=72,topMargin=72,BottomMargin=18)
-
+	respuesta['Content-Disposition'] = 'attachment; filename = "respuesta.pdf"'
+	Q = SimpleDocTemplate(respuesta,rightMargin=72,leftMargin=72,topMargin=72,BottomMargin=18)
 
 	Story = []
 
@@ -27,9 +22,4 @@ def PdfMuestra(request):
 	Story.append(Paragraph(ptext,styles["Normal"]))
 
 	Q.build(Story)
-
-	respuesta.write(Temp.getvalue())
-
-	Temp.close()
-
-	return respuesta
+	return Q
