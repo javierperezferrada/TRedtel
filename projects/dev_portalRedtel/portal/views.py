@@ -7,11 +7,17 @@ from django.http.response import HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.template.context import RequestContext
 from django.contrib.auth.decorators import login_required,permission_required
+<<<<<<< HEAD
 from reportlab.pdfgen import canvas
 from reportlab.platypus import Paragraph
 from reportlab.platypus.doctemplate import SimpleDocTemplate
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from django.http import HttpResponse
+=======
+from django.http import HttpResponse
+from io import BytesIO 
+from reportlab.pdfgen import canvas
+>>>>>>> refs/remotes/origin/master
 from .models import Usuario
 from .models import Liquidacion
 from django.contrib import messages
@@ -39,6 +45,7 @@ def obtener_certificado(request):
 
 @login_required()
 def mis_liquidaciones(request):
+<<<<<<< HEAD
     respuesta = HttpResponse(content_type = 'application/pdf')
     respuesta['Content-Disposition'] = 'filename = "respuesta.pdf"'
 
@@ -63,6 +70,43 @@ def mis_liquidaciones(request):
     respuesta.close()
 
     return respuesta
+=======
+    usuario = get_object_or_404(Usuario, id=request.user.id)
+    qs = Liquidacion.objects.filter(Usuario_rut=usuario.rut)
+    qs = qs.latest("mes")
+    return render_to_response('mis_liquidaciones.html', {'qs': qs}, context_instance=RequestContext(request))
+
+@login_required()
+def imprimir_ultima(request):  
+    try: 
+        usuario = get_object_or_404(Usuario, id=request.user.id)
+        qs = Liquidacion.objects.filter(Usuario_rut=usuario.rut)
+        qs = qs.latest("mes")
+    except ValueError: 
+        raise Http404() 
+    response = HttpResponse(content_type='application/pdf') 
+    response['ContentDisposition'] = 'filename="ultima_liquidacion.pdf"' 
+    buffer = BytesIO() 
+    p = canvas.Canvas(buffer) 
+    p.drawString(100, 800, "Rut trabajador")
+    p.drawString(300, 800, str(qs.Usuario_rut))
+    p.drawString(100, 790, "mes")
+    p.drawString(300, 790, str(qs.mes))
+    p.drawString(100, 780, "Sueldo")
+    p.drawString(300, 780, str(qs.sueldo))
+    p.drawString(100, 770, "Gratificacion legal")
+    p.drawString(300, 770, str(qs.gratificacion))
+    p.drawString(100, 760, "AFP")
+    p.drawString(300, 760, str(qs.afp))
+    p.drawString(100, 750, "Anticipo")
+    p.drawString(300, 750, str(qs.anticipo))
+    p.showPage() 
+    p.save() 
+    pdf = buffer.getvalue() 
+    buffer.close() 
+    response.write(pdf) 
+    return response
+>>>>>>> refs/remotes/origin/master
 
 @login_required()
 def copias_liquidaciones(request):
