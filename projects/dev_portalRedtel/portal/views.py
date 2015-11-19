@@ -7,17 +7,14 @@ from django.http.response import HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.template.context import RequestContext
 from django.contrib.auth.decorators import login_required,permission_required
-<<<<<<< HEAD
 from reportlab.pdfgen import canvas
 from reportlab.platypus import Paragraph
 from reportlab.platypus.doctemplate import SimpleDocTemplate
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from django.http import HttpResponse
-=======
 from django.http import HttpResponse
 from io import BytesIO 
 from reportlab.pdfgen import canvas
->>>>>>> refs/remotes/origin/master
 from .models import Usuario
 from .models import Liquidacion
 from django.contrib import messages
@@ -45,7 +42,6 @@ def obtener_certificado(request):
 
 @login_required()
 def mis_liquidaciones(request):
-<<<<<<< HEAD
     respuesta = HttpResponse(content_type = 'application/pdf')
     respuesta['Content-Disposition'] = 'filename = "respuesta.pdf"'
 
@@ -70,7 +66,6 @@ def mis_liquidaciones(request):
     respuesta.close()
 
     return respuesta
-=======
     usuario = get_object_or_404(Usuario, id=request.user.id)
     qs = Liquidacion.objects.filter(Usuario_rut=usuario.rut)
     qs = qs.latest("mes")
@@ -106,7 +101,6 @@ def imprimir_ultima(request):
     buffer.close() 
     response.write(pdf) 
     return response
->>>>>>> refs/remotes/origin/master
 
 @login_required()
 def copias_liquidaciones(request):
