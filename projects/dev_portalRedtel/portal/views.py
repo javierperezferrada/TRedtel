@@ -1,3 +1,4 @@
+
 from django.shortcuts import get_object_or_404, render
 from django.shortcuts import render_to_response
 from django.template.context import RequestContext
@@ -7,12 +8,9 @@ from django.http.response import HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.template.context import RequestContext
 from django.contrib.auth.decorators import login_required,permission_required
-from reportlab.pdfgen import canvas
-from reportlab.platypus import Paragraph
-from reportlab.platypus.doctemplate import SimpleDocTemplate
+from django.http import HttpResponse
+from reportlab.platypus import SimpleDocTemplate, Paragraph
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
-from django.http import HttpResponse
-from django.http import HttpResponse
 from io import BytesIO 
 from reportlab.pdfgen import canvas
 from .models import Usuario
@@ -20,7 +18,6 @@ from .models import Liquidacion
 from django.contrib import messages
 import csv
 from .forms import UploadFileForm
-from Gen_Pdf import PdfMuestra
 
 
 def index(request):
@@ -32,16 +29,11 @@ def home(request):
 
 @login_required()
 def mis_datos(request):
-	usuario = get_object_or_404(Usuario, id=request.user.id)
-	return render_to_response('mis_datos.html', {'usuario': usuario}, context_instance=RequestContext(request))
+    usuario = get_object_or_404(Usuario, id=request.user.id)
+    return render_to_response('mis_datos.html', {'usuario': usuario}, context_instance=RequestContext(request))
 
 @login_required()
 def obtener_certificado(request):
-    usuario = get_object_or_404(Usuario, id=request.user.id)
-    return render_to_response(PdfMuestra(request), {'usuario': usuario}, context_instance=RequestContext(request))
-
-@login_required()
-def mis_liquidaciones(request):
     respuesta = HttpResponse(content_type = 'application/pdf')
     respuesta['Content-Disposition'] = 'filename = "respuesta.pdf"'
 
@@ -66,6 +58,12 @@ def mis_liquidaciones(request):
     respuesta.close()
 
     return respuesta
+    usuario = get_object_or_404(Usuario, id=request.user.id)
+    qs = Liquidacion.objects.filter(Usuario_rut=usuario.rut)
+    qs = qs.latest("mes")
+    return render_to_response('mis_liquidaciones.html', {'qs': qs}, context_instance=RequestContext(request))
+@login_required()
+def mis_liquidaciones(request):
     usuario = get_object_or_404(Usuario, id=request.user.id)
     qs = Liquidacion.objects.filter(Usuario_rut=usuario.rut)
     qs = qs.latest("mes")
@@ -108,7 +106,7 @@ def copias_liquidaciones(request):
     return render_to_response('copias_liquidaciones.html', {'usuario': usuario}, context_instance=RequestContext(request))
 
 @permission_required('portal.puede_cargar', login_url="/ingresar") 
-def cargar_usuarios(request):	
+def cargar_usuarios(request):   
     if request.method == 'POST':
         form = UploadFileForm(request.POST, request.FILES)
         if form.is_valid():
