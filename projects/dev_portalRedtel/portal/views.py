@@ -34,12 +34,14 @@ def mis_datos(request):
 
 @login_required()
 def obtener_certificado(request):
+    try: 
+        usuario = get_object_or_404(Usuario, id=request.user.id)
+    except ValueError: 
+        raise Http404() 
     respuesta = HttpResponse(content_type = 'application/pdf')
     respuesta['Content-Disposition'] = 'filename = "respuesta.pdf"'
 
     Q = SimpleDocTemplate(respuesta,rightMargin=72,leftMargin=72,topMargin=72,BottomMargin=18)
-
-
     Story = []
 
     styles = getSampleStyleSheet()
@@ -48,8 +50,15 @@ def obtener_certificado(request):
 
     Story.append(Paragraph(ptext,styles["Normal"]))
 
+    ptext = 'Rut usuario: '+str(usuario.rut)
 
-    ptext = 'Usuario en el sistema es pura shit'
+    Story.append(Paragraph(ptext,styles["Normal"]))
+
+    ptext = 'Fecha Ingreso: '+str(usuario.fecha_ingreso)
+
+    Story.append(Paragraph(ptext,styles["Normal"]))
+
+    ptext = 'Vencimiento Licencia de Conducir: '+str(usuario.vencimiento_licencia_conducir)
 
     Story.append(Paragraph(ptext,styles["Normal"]))
 
