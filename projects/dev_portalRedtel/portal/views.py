@@ -1,4 +1,4 @@
-
+# -*- coding: utf-8 -*-
 from django.shortcuts import get_object_or_404, render
 from django.shortcuts import render_to_response
 from django.template.context import RequestContext
@@ -33,53 +33,14 @@ def mis_datos(request):
     return render_to_response('mis_datos.html', {'usuario': usuario}, context_instance=RequestContext(request))
 
 @login_required()
-def obtener_certificado(request):
-    try: 
-        usuario = get_object_or_404(Usuario, id=request.user.id)
-    except ValueError: 
-        raise Http404() 
-    respuesta = HttpResponse(content_type = 'application/pdf')
-    respuesta['Content-Disposition'] = 'filename = "respuesta.pdf"'
-
-    Q = SimpleDocTemplate(respuesta,rightMargin=72,leftMargin=72,topMargin=72,BottomMargin=18)
-    Story = []
-
-    styles = getSampleStyleSheet()
-
-    ptext = 'Texto de prueba.'
-
-    Story.append(Paragraph(ptext,styles["Normal"]))
-
-    ptext = 'Rut usuario: '+str(usuario.rut)
-
-    Story.append(Paragraph(ptext,styles["Normal"]))
-
-    ptext = 'Fecha Ingreso: '+str(usuario.fecha_ingreso)
-
-    Story.append(Paragraph(ptext,styles["Normal"]))
-
-    ptext = 'Vencimiento Licencia de Conducir: '+str(usuario.vencimiento_licencia_conducir)
-
-    Story.append(Paragraph(ptext,styles["Normal"]))
-
-    Q.build(Story)
-
-    respuesta.close()
-
-    return respuesta
-    usuario = get_object_or_404(Usuario, id=request.user.id)
-    qs = Liquidacion.objects.filter(Usuario_rut=usuario.rut)
-    qs = qs.latest("mes")
-    return render_to_response('mis_liquidaciones.html', {'qs': qs}, context_instance=RequestContext(request))
-@login_required()
 def mis_datos(request):
 	usuario = get_object_or_404(Usuario, id=request.user.id)
 	return render_to_response('mis_datos.html', {'usuario': usuario}, context_instance=RequestContext(request))
 
-@login_required()
-def obtener_certificado(request):
-    usuario = get_object_or_404(Usuario, id=request.user.id)
-    return render_to_response('obtener_certificado.html', {'usuario': usuario}, context_instance=RequestContext(request))
+#@login_required()
+#def obtener_certificado(request):
+#    usuario = get_object_or_404(Usuario, id=request.user.id)
+#    return render_to_response('obtener_certificado.html', {'usuario': usuario}, context_instance=RequestContext(request))
 
 @login_required()
 def mis_liquidaciones(request):
@@ -93,6 +54,31 @@ def liq_detalle(request):
     liquidaciones = Liquidacion.objects.filter(Usuario_rut=usuario.rut)
     return render_to_response('mis_liquidaciones.html', {'liquidaciones': liquidaciones}, context_instance=RequestContext(request))
 
+
+@login_required()
+def obtener_certificado(request):
+    try: 
+        usuario = get_object_or_404(Usuario, id=request.user.id)
+    except ValueError: 
+        raise Http404() 
+    respuesta = HttpResponse(content_type = 'application/pdf')
+    respuesta['Content-Disposition'] = 'filename = "Certificado_antiguedad_laboral.pdf"'
+    Q = SimpleDocTemplate(respuesta,rightMargin=72,leftMargin=72,topMargin=72,BottomMargin=18)
+    Story = []
+    styles = getSampleStyleSheet()
+    ptext = 'Texto de prueba.'
+    Story.append(Paragraph(ptext,styles["Normal"]))
+    ptext = 'Rut usuario: '+str(usuario.rut)
+    Story.append(Paragraph(ptext,styles["Normal"]))
+    ptext = 'Fecha Ingreso: '+str(usuario.fecha_ingreso)
+    Story.append(Paragraph(ptext,styles["Normal"]))
+    ptext = 'Vencimiento Licencia de Conducir: '+str(usuario.vencimiento_licencia_conducir)
+    Story.append(Paragraph(ptext,styles["Normal"]))
+    Q.build(Story)
+    respuesta.close()
+    return respuesta
+ 
+
 @login_required()
 def imprimir_liquidacion(request,pk):   
     try: 
@@ -101,16 +87,32 @@ def imprimir_liquidacion(request,pk):
         raise Http404()  
     response = HttpResponse(content_type='application/pdf') 
     response['Content-Disposition'] = "attachment; filename="+str(liquidacion.mes)+"_"+str(liquidacion.ano)+".pdf"
-    buffer = BytesIO() 
-    p = canvas.Canvas(buffer) 
-    p.drawString(100, 700, "id liquidacion")
-    p.drawString(100, 800, "id liquidacion")
-    p.drawString(300, 800, str(liquidacion.id))
-    p.showPage() 
-    p.save() 
-    pdf = buffer.getvalue() 
-    buffer.close() 
-    response.write(pdf) 
+    Q = SimpleDocTemplate(response,rightMargin=72,leftMargin=72,topMargin=72,BottomMargin=18)
+    Story = []
+    styles = getSampleStyleSheet()
+    ptext = 'Liquidacion de Sueldo.'
+    Story.append(Paragraph(ptext,styles["Normal"]))
+
+    ptext = 'Rut Trabajador: '+str(liquidacion.Usuario_rut)
+    Story.append(Paragraph(ptext,styles["Normal"]))
+    ptext = 'mes: '+str(liquidacion.mes)
+    Story.append(Paragraph(ptext,styles["Normal"]))
+    ptext = 'año: '+str(liquidacion.ano)
+    Story.append(Paragraph(ptext,styles["Normal"]))
+    ptext = 'zonal: '+str(liquidacion.zonal)
+    Story.append(Paragraph(ptext,styles["Normal"]))
+    ptext = 'centro costo: '+str(liquidacion.c_costo)
+    Story.append(Paragraph(ptext,styles["Normal"]))
+    ptext = 'dias: '+str(liquidacion.dias)
+    Story.append(Paragraph(ptext,styles["Normal"]))
+    ptext = 'Sueldo: '+str(liquidacion.sueldo)
+    Story.append(Paragraph(ptext,styles["Normal"]))
+    ptext = 'Horas extras: '+str(liquidacion.h_extras)
+    Story.append(Paragraph(ptext,styles["Normal"]))
+    ptext = 'Bonos imponibles: '+str(liquidacion.bonos_impon)
+    Story.append(Paragraph(ptext,styles["Normal"]))
+    Q.build(Story)
+    response.close()
     return response
 
 @login_required()
