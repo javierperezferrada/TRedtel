@@ -67,10 +67,7 @@ def obtener_certificado(request):
     respuesta.close()
 
     return respuesta
-    usuario = get_object_or_404(Usuario, id=request.user.id)
-    qs = Liquidacion.objects.filter(Usuario_rut=usuario.rut)
-    qs = qs.latest("mes")
-    return render_to_response('mis_liquidaciones.html', {'qs': qs}, context_instance=RequestContext(request))
+
 @login_required()
 def mis_liquidaciones(request):
     usuario = get_object_or_404(Usuario, id=request.user.id)
