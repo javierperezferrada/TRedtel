@@ -1,0 +1,113 @@
+<div class="liquidacion">
+<table class="table hovered" id='encabezado_liquidacion'>
+	
+	<th colspan='3'>LIQUIDACION DE SUELDO MES {{liquidacion.mes}} {{liquidacion.ano}}</th>
+	<th><button class="button primary" value="imprimir"><a href="imprimir_liquidacion/{{ liquidacion.id }}">Descargar</a></button></th>
+	
+	<tr>
+		<td>% COTIZACION</td> <td></td>
+		<td>PACTADO</td> <td></td>
+	</tr>
+	<tr>
+		<td>TRIBUTABLE</td> <td></td>
+		<td>DIAS TRABAJADOS</td> <td>{{liquidacion.dias}}</td>
+	</tr>
+	<tr>
+		
+		<td>LICENCIA</td> <td></td>
+		<td>AUSENTE</td> <td></td>
+	</tr>
+</table>
+
+<table class="table hovered" id='cuerpo_liquidacion'>	
+	<th colspan='2'>HABERES</th>
+	<tr><td>SUELDO DEL MES</td>
+		<td>{{ liquidacion.sueldo}}</td></tr>
+	{% if liquidacion.h_extras %}
+		<tr><td>HORAS EXTRAS</td>
+			<td>{{ liquidacion.h_extras}}</td></tr>
+	{% endif %}
+	{% if liquidacion.bonos_impon %}
+		<tr><td>BONOS IMPONIBLES</td>
+			<td>{{ liquidacion.bonos_impon}}</td></tr>
+	{% endif %}
+	<tr><td>GRATIFICACION</td>
+		<td>{{ liquidacion.gratificacion}}</td></tr>
+	{% if liquidacion.comision_produccion %}
+		<tr><td>COMISION PRODUCCION</td>
+			<td>{{ liquidacion.comision_produccion}}</td></tr>
+	{% endif %}
+	{% if liquidacion.semana_corrida %}
+		<tr><td>SEMANA CORRIDA</td>
+			<td>{{ liquidacion.semana_corrida}}</td></tr>
+	{% endif %}
+	<tr><td><strong>TOTAL HABERES IMPONIBLES</strong></td>
+		<td>{{ liquidacion.total_impon}}</td></tr>
+	{% if liquidacion.asignacion_viaticos %}
+		<tr><td>ASIGNACION VIATICOS</td>
+			<td>{{ liquidacion.asignacion_viaticos}}</td></tr>
+	{% endif %}
+	{% if liquidacion.movilizacion %}
+		<tr><td>MOVILIZACION</td>
+			<td>{{ liquidacion.movilizacion}}</td></tr>
+	{% endif %}
+	{% if liquidacion.colacion %}
+		<tr><td>COLACION</td>
+			<td>{{ liquidacion.colacion}}</td></tr>
+	{% endif %}
+	{% if liquidacion.otro_no_impon %}
+		<tr><td>OTROS NO IMPONIBLES</td>
+			<td>{{ liquidacion.otro_no_impon}}</td></tr>
+	{% endif %}
+	{% if liquidacion.asig_fam %}
+		<tr><td>ASIGNACION FAMILIAR</td>
+			<td>{{ liquidacion.asig_fam}}</td></tr>
+	{% endif %}
+	<tr><td><strong>TOTAL NO IMPONIBLES</strong></td>
+		<td>{{ liquidacion.total_no_impon}}</td></tr>
+	<tr><td><strong>TOTAL HABERES</strong></td>
+		<td>{{ liquidacion.total_haberes}}</td></tr>
+	<th colspan='2'>DESCUENTOS</th>
+	<tr><td>AFP</td>
+			<td>{{ liquidacion.afp}}</td></tr>
+	<tr><td>SEGURO DE CESANTIA</td>
+			<td>{{ liquidacion.seg_cesantia}}</td></tr>
+	{% if liquidacion.ahorro_afp %}
+		<tr><td>AHORRO AFP</td>
+			<td>{{ liquidacion.ahorro_afp}}</td></tr>
+	{% endif %}
+	<tr><td>SALUD</td>
+			<td>{{ liquidacion.salud}}</td></tr>
+	{% if liquidacion.mutual %}
+		<tr><td>MUTUAL</td>
+			<td>{{ liquidacion.mutual}}</td></tr>
+	{% endif %}
+	{% if liquidacion.impto_unico %}
+		<tr><td>IMPUESTO UNICO</td>
+			<td>{{ liquidacion.impto_unico}}</td></tr>
+	{% endif %}
+	{% if liquidacion.prestamo_ccaf %}
+		<tr><td>PRESTAMO CCAF</td>
+			<td>{{ liquidacion.prestamo_ccaf}}</td></tr>
+	{% endif %}
+	{% if liquidacion.prestamos %}
+		<tr><td>PRESTAMOS</td>
+			<td>{{ liquidacion.prestamos}}</td></tr>
+	{% endif %}
+	{% if liquidacion.anticipos %}
+		<tr><td>ANTICIPOS</td>
+			<td>{{ liquidacion.anticipos}}</td></tr>
+	{% endif %}
+	{% if liquidacion.otros_dsctos %}
+		<tr><td>OTROS DESCUENTOS</td>
+			<td>{{ liquidacion.otros_dsctos}}</td></tr>
+	{% endif %}
+	<tr><td>TOTAL DESCUENTOS</td>
+			<td>{{ liquidacion.total_dsctos}}</td></tr>
+	<tr><th>LIQUIDO A PAGO </th>
+			<th>{{ liquidacion.liquido_pago}}</th></tr>
+</table>
+
+</div>
+
+
