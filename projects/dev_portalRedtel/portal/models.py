@@ -3,33 +3,18 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-class Cargo(models.Model):
-	nombre = models.CharField(max_length=45)
-
-class Afp(models.Model):
-	nombre = models.CharField(max_length=45)
-
-class Salud(models.Model):
-	nombre = models.CharField(max_length=45)
-
-class Zonal(models.Model):
-	nombre = models.CharField(max_length=20)
-
-class CCosto(models.Model):
-	nombre = models.CharField(max_length=50)
-
 class Usuario(models.Model):
-    User_id = models.IntegerField()
-    rut = models.CharField(max_length=45)
-    fecha_ingreso = models.DateField()
-    zonal = models.ForeignKey(Zonal)
-    afp =models.ForeignKey(Afp)
-    salud = models.ForeignKey(Salud)
-    ccosto = models.ForeignKey(CCosto)
-    cargo = models.ForeignKey(Cargo)
-    fecha_ingreso = models.DateField();
-    vencimiento_licencia_conducir = models.DateField()
-    direccion = models.CharField(max_length=100)
+	User_id = models.IntegerField()
+	rut = models.CharField(max_length=45)
+	fecha_ingreso = models.DateField()
+	zonal = models.CharField(max_length=45)
+	afp =models.CharField(max_length=45)
+	salud = models.CharField(max_length=45)
+	ccosto = models.CharField(max_length=45)
+	cargo = models.CharField(max_length=45)
+	fecha_ingreso = models.DateField();
+	vencimiento_licencia_conducir = models.DateField()
+	direccion = models.CharField(max_length=100)
 
 class Liquidacion(models.Model):
 	Usuario_rut = models.CharField(max_length=15)

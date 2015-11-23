@@ -114,3 +114,4 @@ MEDIA_ROOT = 'media'
 LOGIN_REDIRECT_URL = "/home"
 # Redirect when login is not correct.
 LOGIN_URL = '/'
+

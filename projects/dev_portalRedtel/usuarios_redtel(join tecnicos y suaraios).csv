@@ -1,0 +1,606 @@
+nombres,apellidos,FechaIngreso,zonal,rut,email,cargo
+Pablo Andres,Hermosilla Espinoza,2008-02-01 00:00:00,VLDV,13.846.637-k,phermosilla@redtelingenieria.cl,Tecnico
+Mario Gerardo,Ferrada Aguero,0000-00-00 00:00:00,VLDV,13.809.234-0,mferrada@redtelingenieria.cl,Tecnico
+Yarela Vanesa,Vega Rios,0000-00-00 00:00:00,VLDV,15.262.431-k,nrunin@redtelingenieria.cl,Administrativo
+Ivan Arnoldo,Nahuelpan Nahuelpan,0000-00-00 00:00:00,VLDV,13.585.614-2,inahuelpan@redtelingenieria.cl,Tecnico
+Manuel Eduardo,Prado Miranda,0000-00-00 00:00:00,VLDV,12.994.237-1,mprado@redtelingenieria.cl,Tecnico
+Cristian Fredy,Rojas Pereira,0000-00-00 00:00:00,VLDV,8.669.586-3,crojas@redtelingenieria.cl,Tecnico
+Sebastian Alejandro,Catripay Catripay,0000-00-00 00:00:00,TMCO,16.160.107-1,,Tecnico
+Eladio Israel,Fuentes Chavez,0000-00-00 00:00:00,VLDV,8.466.186-4,efuentes@redtelingenieria.cl,Tecnico
+Eduardo Alfredo,Rosas Gomez,0000-00-00 00:00:00,PMTT,17.358.576-4,,Vendedor
+Gerardo Marcelo ,Morales Pineda,2009-01-17 09:33:39,VLDV,16.806.031-9,gmorales@redtelingenieria.cl,Tecnico
+Lilian Doraliza,Diaz Pinto,0000-00-00 00:00:00,VLDV,10.085.844-4,ldiaz@redtelingenieria.cl,Administrativo
+Cesar Felipe,Sandoval Sandoval,2009-01-05 00:00:00,VLDV,13.847.158-6,csandoval@redtelingenieria.cl,Tecnico
+Eduardo Alfredo,Rosas Gomez,0000-00-00 00:00:00,PMTT,17.358.576-4,,Tecnico
+Javier Alejandro,Lara Vargas,0000-00-00 00:00:00,TMCO,17.764.733-0,,Tecnico
+Victor Hugo ,Navarrete Mundaca,0000-00-00 00:00:00,VLDV,12.430.924-7,vnavarrete@redtelingenieria.cl,Administrativo
+Julio Guidilfredo,Zarecht Ortega,2009-05-22 09:03:13,VLDV,7.385.055-k,juliozarechto@gmail.com,Administrativo
+Jose Luis,Cardenas Marin,0000-00-00 00:00:00,PMTT,10.875.178-9,,Tecnico
+Rouse Dennisse,Canales Rubilar,0000-00-00 00:00:00,VLDV,13.833.485-6,rcanales@redtelingenieria.cl,Administrativo
+Juan Carlos,Gomez Rodriguez,0000-00-00 00:00:00,VLDV,7.388.514-0,jcgomez@redtelingenieria.cl,Administrativo
+Carlos  Humberto,Cardenas Soto,2009-09-29 13:20:26,VLDV,15.289.157-1,carlitos_chofe@yahoo.es,Tecnico
+Fredy Alejandro,Contreras Vidal,0000-00-00 00:00:00,VLDV,16.160.829-7,,Tecnico
+Andres Alfonso,Zarecht Morales,0000-00-00 00:00:00,PMTT,16.161.090-9,azarecht@redtelingenieria.cl,Administrativo
+Rodrigo Alejandro,Mella Romero,0000-00-00 00:00:00,VLDV,14.081.415-6,rmella@redtelingenieria.cl,Tecnico
+Rodrigo Alejandro ,Toledo Morales,0000-00-00 00:00:00,VLDV,11.830.602-3,,Tecnico
+Gabriel Williams,Maldonado Carabantes,0000-00-00 00:00:00,VLDV,14.082.821-1,,Tecnico
+Miguel Angel,Fuentes Delgado,0000-00-00 00:00:00,PMTT,16.319.379-5,mfuentes@redtelingenieria.cl,Tecnico
+Fernando Ruben,Ulloa Inostroza,0000-00-00 00:00:00,PMTT,9.119.037-0,fulloa@redtelingenieria.cl,Tecnico
+Juan Carlos,Zarecht Ortega,0000-00-00 00:00:00,PMTT,8.162.945-5,jczarecht@redtelingenieria.cl,Administrativo
+Jaime Andres,Toro Bazan,0000-00-00 00:00:00,VLDV,10.631.166-8,,Tecnico
+Aurelio Hernan,Jara Cares,0000-00-00 00:00:00,TMCO,11.575.100-K,,Tecnico
+Manuel Eduardo,Obando Salvo,0000-00-00 00:00:00,VLDV,12.201.382-0,,Tecnico
+Jonathan Leoncio,Carrillo Velasquez,0000-00-00 00:00:00,PMTT,16.722.634-5,,Vendedor
+Luis Fernando,Lovera Velasquez,0000-00-00 00:00:00,VLDV,13.587.155-9,,Tecnico
+Hector Patricio,Burgos Carcamo,0000-00-00 00:00:00,VLDV,8.806.028-8,,Administrativo
+Jonathan Leoncio,Carrillo Velasquez,0000-00-00 00:00:00,PMTT,16.722.634-5,,Tecnico
+Miguel Angel,Castro Perez,0000-00-00 00:00:00,VLDV,9.225.125-k,,Tecnico
+Erwin Antonio,Segura Cares,0000-00-00 00:00:00,VLDV,13.400.009-0,,Tecnico
+Marisol del Carmen,Perez Ayala,2013-06-01 00:00:00,VLDV,13.520.496-K,mperez@redtlingenieria.cl,Administrativo
+Maicol Rene,Jara Soto,0000-00-00 00:00:00,PMTT,16.806.289-3,,Tecnico
+Jose Alberto ,Andrade Rojas,0000-00-00 00:00:00,PMTT,13.738.986-K,,Tecnico
+Walter Raul ,Vera Gonzalez,0000-00-00 00:00:00,PMTT,13.968.995-k,wvera@redtelingenieria.cl,Administrativo
+Carlos Alfredo,Jara Perez,0000-00-00 00:00:00,VLDV,8.988.522-1,,Tecnico
+Juan Armarndo,Pineda Catricheo,0000-00-00 00:00:00,VLDV,12.748.173-3,,Tecnico
+Cristofer Adrian,Carrasco Morales,0000-00-00 00:00:00,VLDV,18.017.671-3,,Vendedor
+Orlando,Soto Osorio,2014-03-01 00:00:00,TMCO,10.089.714-8,osoto@redtelingenieria.cl,Tecnico
+Patricio Javier,Andrade Oyarzun,0000-00-00 00:00:00,VLDV,15.650.066-6,pandrade@redtelingenieria.cl,Tecnico
+Juan Hipolito,Hernandez Contreras,0000-00-00 00:00:00,VLDV,9.894.538-5,jhernandez@redtelingenieria.cl,Tecnico
+Cesar Arturo,Rivera Fernandez,0000-00-00 00:00:00,VLDV,12.014.834-6,crivera@redtelingenieria.cl,Tecnico
+Luis Elias,Villarroel Soto,0000-00-00 00:00:00,VLDV,14.083.197-2,lvillarroel@redtelingenieria.cl,Administrativo
+Alex Fernando,Mella Vargas,0000-00-00 00:00:00,VLDV,12.747.615-2,ammella@redtelingenieria.cl,Tecnico
+Yarela Vanesa,Vega Rios,0000-00-00 00:00:00,VLDV,15.262.431-k,nrunin@redtelingenieria.cl,Vendedor
+Alberto Eduardo,Mendez Soto,0000-00-00 00:00:00,VLDV,13.117.070-k,amendez@redtelingenieria.cl,Administrativo
+Gerson Adrian,Molina Azocar,2010-02-19 00:00:00,VLDV,13.587.930-4,gmolina@redtelingenieria.cl,Vendedor
+Gerson Adrian,Molina Azocar,2010-02-19 00:00:00,VLDV,13.587.930-4,gmolina@redtelingenieria.cl,Administrativo
+Cristian Fabian,Becar Bustos,0000-00-00 00:00:00,PMTT,16.453.011-6,,Administrativo
+Yarella del Carmen,Martel Mora,0000-00-00 00:00:00,PMTT,16.551.726-1,,Administrativo
+Pedro Alexis,Antilen Catril,0000-00-00 00:00:00,VLDV,13.964.681-9,pantilen@redtelingenieria.cl,Administrativo
+Omar Luis,Alcazar Arismendi,0000-00-00 00:00:00,PMTT,12.994.543-5,oalcazar@redtelingenieria.cl,Tecnico
+Cesar Arturo,Rivera Fernandez,0000-00-00 00:00:00,VLDV,12.014.834-6,crivera@redtelingenieria.cl,Administrativo
+Sergio Patricio,Veliz Bastias,0000-00-00 00:00:00,TMCO,10.307.987-k,pveliz@redtelingenieria.cl,Tecnico
+Hector Enrique,Arriagada Perez,0000-00-00 00:00:00,TMCO,9.553.667-0,,Tecnico
+Rosa Lorena,Sanchez Perez,0000-00-00 00:00:00,OSRN,10.241.733-k,,Vendedor
+Pablo Francisco,Coronado Godoy,0000-00-00 00:00:00,OSRN,13.822.233-0,,Vendedor
+Claudio Cesar,Martinez Obando,2010-04-01 00:00:00,VLDV,15.261.841-7,cmartinez@redtelingenieira.cl,Tecnico
+Julio Alfredo,Cheuqueman Almonacid,0000-00-00 00:00:00,OSRN,11.594.759-1,jcheuqueman@redtelingenieria.cl,Administrativo
+Luis Alberto Jesus,Cartes Pena,2009-11-04 18:49:04,VLDV,15.548.906-5,lcartes@redtelingenieria.cl,Administrativo
+Fabian Antonio,Jara Torres,0000-00-00 00:00:00,TMCO,12.192.177-4,,Tecnico
+Luis Arturo,Pena Navarrete,0000-00-00 00:00:00,TMCO,7.872.411-0,,Tecnico
+Rudolf Ricardo,Schiesewitz Fuentes,0000-00-00 00:00:00,PMTT,13.525.557-2,,Tecnico
+Pablo Esteban,Quintuman Pino,0000-00-00 00:00:00,VLDV,17.383.383-0,,Tecnico
+Alan Reinaldo,Cartes Pena,2015-01-09 00:00:00,VLDV,18.132.774-k,acartes@redtelingenieria.cl,Vendedor
+Roxana,Neira Burgos,0000-00-00 00:00:00,TMCO,14.411.511-2,rneira@redtelingenieria.cl,Administrativo
+Pablo Francisco,Coronado Godoy,0000-00-00 00:00:00,OSRN,13.822.233-0,,Tecnico
+Hector Manuel,Perez Rodriguez,0000-00-00 00:00:00,VLDV,15.262.233-3,hector_manuel-pr@hotmail.com,Administrativo
+Julio Alfredo,Cheuqueman Almonacid,0000-00-00 00:00:00,OSRN,11.594.759-1,jcheuqueman@redtelingenieria.cl,Vendedor
+Rosa Lorena,Sanchez Perez,0000-00-00 00:00:00,OSRN,10.241.733-k,,Administrativo
+Richard Fabian,Chavez Rodriguez,0000-00-00 00:00:00,TMCO,13.809.529-0,,Tecnico
+Nelson  ,Villablanca  Millahual,0000-00-00 00:00:00,LANG,12.927.904-4,,Tecnico
+Cristian  Ivan,Fuentes  Fuentes,0000-00-00 00:00:00,TMCO,17.637.675-9,,Tecnico
+Alex Nicolas,Pavez Delso,0000-00-00 00:00:00,VLDV,17.488.025-5,,Tecnico
+Luis Alberto ,Rivera Vidal,0000-00-00 00:00:00,VLDV,10.811.115-1,,Tecnico
+Victor Manuel,Salazar Villegas,0000-00-00 00:00:00,VLDV,17.259.626-6,,Tecnico
+Rene Humberto,Salazar Villegas,0000-00-00 00:00:00,CNCP,17.604.366-0,,Tecnico
+Jhonatan Roberto,Asenjo Bertin,0000-00-00 00:00:00,VLDV,14.039.608-7,jasenjo@redtelingenieria.cl,Tecnico
+Emir Patricio,Cornejo Cornejo,0000-00-00 00:00:00,VLDV,12.496.300-1,,Administrativo
+Cindy Daniela,Gonzalez Martinez,0000-00-00 00:00:00,OSRN,15.795.419-9,cindydaniela@gmail.com,Administrativo
+Samuel Isaac,Bustos Flandez,0000-00-00 00:00:00,VLDV,18.132.206-3,sbustos@redtelingenieria.cl,Tecnico
+Abel Daniel,Fernandez Chavez,0000-00-00 00:00:00,VLDV,5.948.776-0,,Tecnico
+Ernesto Sofanor,Ther Ther,0000-00-00 00:00:00,VLDV,15.919.111-7,ernesto_ther@hotmail.com,Vendedor
+Sebastian Reimundo,Miranda Soto,0000-00-00 00:00:00,VLDV,9.012.898-1,,Tecnico
+Jhon Balter ,San Martin Cuevas,0000-00-00 00:00:00,TMCO,14.521.824-1,,Tecnico
+Miguel Angel ,Navarro Chavez,0000-00-00 00:00:00,TMCO,17.888.538-3,,Tecnico
+Daniel Rumualdo,Pacheco Salas,0000-00-00 00:00:00,VLDV,5.954.650-3,pacdaniel@gmail.com,Tecnico
+Elias Nicolas,Chavez Ibarra,0000-00-00 00:00:00,TMCO,8.085.826-4,,Tecnico
+Victor Antonio,Hernandez Barrientos,0000-00-00 00:00:00,TMCO,11.425.411-8,,Tecnico
+Carlos Enrique,Martinez Wigand,0000-00-00 00:00:00,TMCO,16.281.949-6,,Tecnico
+Eduardo Andres,Zapata Ramirez,0000-00-00 00:00:00,TMCO,13.587.762-k,,Tecnico
+Nilda Elizabeth,Arias Zenteno,0000-00-00 00:00:00,TMCO,12.193.685-2,,Administrativo
+Luis Alberto,Bahamondes Perez,0000-00-00 00:00:00,VLDV,15.968.852-6,,Tecnico
+Francisco Alejandro ,Cheiman Guzman,0000-00-00 00:00:00,TMCO,17.368.516-5,,Tecnico
+Katherine Lisete,Hernandez Almonacid,0000-00-00 00:00:00,OSRN,16.111.871-0,,Administrativo
+Manuel Segundo,Caro Seguel,0000-00-00 00:00:00,VLDV,9.852.979-9,,Tecnico
+Carlos Eugenio,Berrocal Rivas,0000-00-00 00:00:00,VLDV,10.566.386-2,,Tecnico
+Ismael Ignacio,Alvarez Mellado,0000-00-00 00:00:00,VLDV,16.806.640-6,,Tecnico
+Katherine Lisete,Hernandez Almonacid,0000-00-00 00:00:00,OSRN,16.111.871-0,,Vendedor
+Cristofer Adrian,Carrasco Morales,0000-00-00 00:00:00,VLDV,18.017.671-3,,Tecnico
+Jorge Luis,Gonzalez Carrasco,0000-00-00 00:00:00,VLDV,17.653.006-5,,Tecnico
+Beatriz,Bahamonde Araneda,0000-00-00 00:00:00,OSRN,12.483.844-4,,Vendedor
+Mauricio Alejandro,Sobarzo Sobarzo,0000-00-00 00:00:00,VLDV,13.119.968-6,,Tecnico
+Guillermo Francisco,Letelier Norambuena,2013-05-02 00:00:00,VLDV,7.317.028-1,gletelier@redtelingenieria.cl,Administrativo
+Cristian Alejandro,Guajardo Barrientos,0000-00-00 00:00:00,VLDV,13.847.069-5,,Tecnico
+Marco Antonio,Jara Burgos,0000-00-00 00:00:00,TMCO,10.496.031-6,,Tecnico
+Hector Erasmo,Martinez Ceballo,0000-00-00 00:00:00,VLDV,9.096.612-k,,Tecnico
+Mauricio Javier,Diaz Rivera,0000-00-00 00:00:00,PMTT,15.320.503-5,,Tecnico
+Jonathan David,Figueroa Riquelme,0000-00-00 00:00:00,TMCO,15.502.716-9,,Tecnico
+Jorge Esteban,Estroz Jaramillo,0000-00-00 00:00:00,VLDV,17.963.311-6,,Vendedor
+Yonatan Guido,Pereira Conoeman,0000-00-00 00:00:00,VLDV,15.553.490-7,,Tecnico
+Nestor Rodrigo,Levin Leiva,0000-00-00 00:00:00,VLDV,13.521.358-6,nlevin@redtelingenieria.cl,Tecnico
+Victor Ignacio ,Navarrete Espinoza,0000-00-00 00:00:00,TMCO,18.198.686-7,,Tecnico
+Emir Patricio,Cornejo Cornejo,0000-00-00 00:00:00,VLDV,12.496.300-1,,Tecnico
+Cesar Danilo,Poza Esparza,0000-00-00 00:00:00,VLDV,17.562.386-8,,Tecnico
+German Alejandro,Espinoza Aros,0000-00-00 00:00:00,VLDV,16.587.800-0,,Tecnico
+Jose Octavio,Saldia Saldia,0000-00-00 00:00:00,PMTT,15.579.148-9,josstim@hotmail.com,Tecnico
+Sebastian Ignacio ,Hernandez Barria,0000-00-00 00:00:00,PMTT,16.237.261-0,s_hernandez@live.cl,Tecnico
+Daniel Clemente,Haeger Fuentealba,0000-00-00 00:00:00,PMTT,13.739.188-0,dhaeger@redtelingenieria.cl,Tecnico
+Samuel Fernando,Gatica Matamala,0000-00-00 00:00:00,VLDV,10.801.961-1,,Tecnico
+Genoveva del Carmen,Martinez Iturra,0000-00-00 00:00:00,VLDV,13.162.222-8,,Vendedor
+Hernan Alejandro,Cortez Alarcon,0000-00-00 00:00:00,OSRN,16.343.385-0,,Tecnico
+Javier Esteban,Ruiz Vargas,0000-00-00 00:00:00,OSRN,12.756.545-7,,Tecnico
+Manuel Alejandro,Villanueva Llanquilef,0000-00-00 00:00:00,VLDV,15.294.630-9,,Tecnico
+Rodrigo Andres,Macias Alvarado,0000-00-00 00:00:00,VLDV,15.952.726-3,rmacias@redtelingenieria.cl,Tecnico
+Felix Bernardo,Nahuelpan Diaz,2011-06-01 00:00:00,OSRN,16.111.328-k,,Administrativo
+Javier Esteban,Ruiz Vargas,0000-00-00 00:00:00,OSRN,12.756.545-7,,Administrativo
+Sylvana Beatriz,Diaz Montecinos,2014-09-01 00:00:00,OSRN,15.273.877-3,sdiaz@redtelingenieria.cl,Tecnico
+Jaime Antonio,Sanchez Ramirez,0000-00-00 00:00:00,VLDV,14.083.061-5,yimi9918@hotmail.com,Administrativo
+Guillermo Patricio,Villegas Perez,0000-00-00 00:00:00,VLDV,8.885.806-9,patvilleg@yahoo.es,Tecnico
+Eduardo Daniel,Seguel Torres,0000-00-00 00:00:00,OSRN,17.972.817-6,,Tecnico
+Luis Andres ,Carrillo Ruiz,0000-00-00 00:00:00,OSRN,16.832.059-0,,Tecnico
+Carlos Heriberto,Mansilla Aguila,0000-00-00 00:00:00,PMTT,8.681.358-0,,Administrativo
+Braulio Esteban,Saez Noches,0000-00-00 00:00:00,VLDV,18.196.408-1,,Tecnico
+Pablo Roberto,Flores Vera,0000-00-00 00:00:00,OSRN,13.523.719-1,,Administrativo
+Elizabeth Paola,Veliz Bastias,0000-00-00 00:00:00,TMCO,11.881.748-6,,Administrativo
+Oscar Andres,Berrocal Rojas,0000-00-00 00:00:00,VLDV,14.081.365-6,,Administrativo
+Benito Hernan,Alarcon Campos,0000-00-00 00:00:00,VLDV,17.965.243-9,,Administrativo
+Miguel Alejandro,Reyes Toledo,0000-00-00 00:00:00,PMTT,16.586.293-7,mreyes@redtelingenieria.cl,Tecnico
+Sergio Nolberto,Leay Gomez,0000-00-00 00:00:00,OSRN,14.083.536-6,,Administrativo
+Gerson Adrian,Molina Azocar,2010-02-19 00:00:00,VLDV,13.587.930-4,gmolina@redtelingenieria.cl,Tecnico
+Fernando,Godoy Roldan,0000-00-00 00:00:00,OSRN,7.134.031-7,,Tecnico
+Martin Yonatan,Mendez Aguilar,0000-00-00 00:00:00,CNCP,17.033.747-6,,Tecnico
+Monica Elena,Zarecht Martinez,2012-02-14 00:00:00,VLDV,13.521.213-k,mzarecht@redtelingenieria.cl,Administrativo
+Felix Bernardo,Nahuelpan Diaz,2011-06-01 00:00:00,OSRN,16.111.328-k,,Tecnico
+Guido Marcelo,Proboste Sierpe,0000-00-00 00:00:00,OSRN,12.754.031-4,mproboste@redtelingenieria.cl,Administrativo
+Ricardo Gabriel,Antinanco Alcapan,0000-00-00 00:00:00,OSRN,17.323.958-0,,Tecnico
+Natalia Isabel,Ochoa Rivas,0000-00-00 00:00:00,VLDV,13.820.304-2,natalia.ochoa.rivas@gmail.com,Administrativo
+victor Salvador,Segovia Gajardo,0000-00-00 00:00:00,OSRN,13.040.520-7,,Tecnico
+Mario Cesar,Chavez Rodriguez,0000-00-00 00:00:00,TMCO,12.331.826-9,,Tecnico
+Victor Hugo ,Navarrete Mundaca,0000-00-00 00:00:00,VLDV,12.430.924-7,vnavarrete@redtelingenieria.cl,Tecnico
+Andrea Ethel,Haro Vargas,2011-06-07 10:16:29,PMTT,10.370.059-0,aharo@redtelingenieria.cl,Administrativo
+Jorge Luis,Solis Martin,2011-07-01 00:00:00,VLDV,15.759.368-4,jsolis@redtelingenieria.cl,Tecnico
+Victor David,Cid Arias,0000-00-00 00:00:00,VLDV,16.543.264-9,tronix.cid@gmail.com,Tecnico
+Cristian Andres,Garces Quintul,0000-00-00 00:00:00,OSRN,16.781.170-1,cgarces@redtelingenieria.cl,Tecnico
+Marcos Arturo,Gonzalez Llefi,0000-00-00 00:00:00,OSRN,8.744.862-2,mvera@redtelingenieria.cl,Tecnico
+Cesar Guido,Anguita Soto,0000-00-00 00:00:00,PMTT,5.852.616-9,,Tecnico
+Oscar Andres,Berrocal Rojas,0000-00-00 00:00:00,VLDV,14.081.365-6,,Tecnico
+Eduvigis Adelina,Vasquez Pena,0000-00-00 00:00:00,VLDV,12.199.964-1,evasquez@redtelingenieria.cl,Administrativo
+Ricardo Esteban,Pino Aravena,0000-00-00 00:00:00,OSRN,12.930.415-4,,Administrativo
+Marcelo Alejandro,Garcia Gfell,0000-00-00 00:00:00,VLDV,14.282.225-3,,Tecnico
+Claudio Aaron,Pizarro Aguayo,0000-00-00 00:00:00,TMCO,15.963.765-4,,Tecnico
+Jose Guillermo,Anual Jaramillo,2013-01-02 00:00:00,CSTR,12.432.543-9,janual@redtelingenieria.cl,Tecnico
+Freddy Benjamin,Gavilan Perez,0000-00-00 00:00:00,VLDV,17.561.392-7,benja_hiphop_skl@hotmail.com,Tecnico
+Cristian Ivan,Moreira Zuniga,0000-00-00 00:00:00,OSRN,12.997.515-6,,Tecnico
+Armin Patricio,Moreira Zuniga,0000-00-00 00:00:00,OSRN,13.522.667-K,,Tecnico
+Juan Carlos,Henriquez Vera,0000-00-00 00:00:00,VLDV,8.947.680-1,henriquez.58@hotmail.com,Tecnico
+Jose Miguel,Mancilla Pena,0000-00-00 00:00:00,OSRN,17.197.612-k,jmiguel_mancillap@hotmail.com,Tecnico
+Luis Hernan,Alvarez Zuniga,0000-00-00 00:00:00,VLDV,14.281.651-2,lalvarez@redtelingenieria.cl,Administrativo
+Maria Pia,Zuniga Aguilera,0000-00-00 00:00:00,OSRN,14.108.335-k,,Vendedor
+Jose Francisco,Cisterna Caro,0000-00-00 00:00:00,PMTT,9.378.704-8,,Tecnico
+Roberto Antonio,Soto Fernandez,0000-00-00 00:00:00,TMCO,15.259.952-8,rsoto@redtelingenieria.cl,Tecnico
+Ricardo Enrique,Aguayo Gallardo,0000-00-00 00:00:00,PMTT,9.533.463-6,,Tecnico
+henry Andres,Mulato Soto,0000-00-00 00:00:00,PMTT,13.967.645-9,,Tecnico
+Jairo Andres,Urrutia Matuz,0000-00-00 00:00:00,VLDV,17.360.444-0,,Tecnico
+Claudio Enrique,Saldivia Ojeda,0000-00-00 00:00:00,VLDV,11.709.435-9,,Administrativo
+Julio Cesar,Roa Rodriguez,0000-00-00 00:00:00,TMCO,13.274.242-1,,Tecnico
+Pedro Emilio,Villarroel Villarroel,0000-00-00 00:00:00,OSRN,15.687.956-8,pvillarv@gmail.com,Tecnico
+Marcela del Rosario ,Mendez Hermosilla,2011-11-24 00:00:00,VLDV,11.704.460-2,mmendez@redtelingenieria.cl,Administrativo
+Sandra Angelica,Rodriguez Orellana,0000-00-00 00:00:00,OSRN,13.118.196-5,srodriguez@redtelingenieria.cl,Administrativo
+Bryan David Andres,Navarrete Huaiquimilla,0000-00-00 00:00:00,TMCO,18.197.016-2,,Tecnico
+Rodrigo Felix,Carcamo Tellez,2011-12-23 00:00:00,OSRN,13.738.606-2,,Administrativo
+Rodrigo Felix,Carcamo Tellez,2011-12-23 00:00:00,OSRN,13.738.606-2,,Tecnico
+Jonathan Andres,Hernandez Cartes,0000-00-00 00:00:00,VLDV,17.449.887-3,jhernandez@redtelingenieria.cl,Tecnico
+Rodrigo Eduardo,Rodriguez Rodriguez,0000-00-00 00:00:00,PMTT,13.162.941-9,,Tecnico
+Alex Patricio,Santana Coiguin,0000-00-00 00:00:00,OSRN,13.735.405-5,,Tecnico
+Marcelo Alexis,Ramirez Villagran,2012-01-16 08:30:00,PMTT,11.781.050-k,mramirez@redtelingenieria.cl,Administrativo
+Alvaro Rodrigo,Canipani Uribe,0000-00-00 00:00:00,PMTT,14.502.826-4,acanipani@redtelingenieria.cl,Tecnico
+Hector Segundo,Oyarzun Flores,0000-00-00 00:00:00,PMTT,8.938.136-3,,Tecnico
+Luis Emilio,Munoz Oyarzo,0000-00-00 00:00:00,PMTT,17.297.371-K,,Tecnico
+Luis Armando,Santana Mansilla,2012-01-20 00:00:00,PMTT,10.478.103-9,lsantana@redtelingenieria.cl,Administrativo
+Cristopher Alejandro,Ayancan Carcamo,0000-00-00 00:00:00,PMTT,17.033.872-3,cayancan@redtelingenieria.cl,Tecnico
+Juan Alejandro,Ivanni Pardo,0000-00-00 00:00:00,PMTT,11.620.079-1,,Administrativo
+Cristian Moises,Salazar Inostroza,0000-00-00 00:00:00,VLDV,16.464.441-3,,Tecnico
+Esteban Rafael ,Henriquez Jaramillo,0000-00-00 00:00:00,VLDV,16.463.999-1,,Tecnico
+Carlos Hernan,krebs Suazo,2012-02-08 00:00:00,TMCO,14.221.684-1,,Tecnico
+Luis Alvaro,Lorca Cortez,0000-00-00 00:00:00,PMTT,17.741.924-9,,Tecnico
+Patricio Guillermo,Mora Lopez,0000-00-00 00:00:00,VLDV,16.825.322-2,,Tecnico
+Henry Bernardino,Soto Almonacid,0000-00-00 00:00:00,PMTT,16.448.783-0,hsoto@redtelingenieria.cl,Tecnico
+Jorge Daniel,Lucero Lefio,0000-00-00 00:00:00,VLDV,10.209.781-5,,Tecnico
+Alex Ricardo,Parra Ruiz,0000-00-00 00:00:00,OSRN,13.162.934-6,,Tecnico
+Elias Ignacio,Herrera Conejeros,0000-00-00 00:00:00,PMTT,18.172.883-3,eherrera@redtelingenieria.cl,Tecnico
+Alexis felipe,Rogel Cardenas,0000-00-00 00:00:00,PMTT,17.889.695-4,arogel@redtelingenieria.cl,Tecnico
+Cesar Patricio,Proboste Cardenas,2012-03-26 00:00:00,OSRN,8.646.938-3,cproboste@redtelingenieria.cl,Tecnico
+Mauricio Javier,Aguilar Rosas,2012-03-28 00:00:00,VLDV,12.430.837-2,maguilar@redtelingenieria.cl,Administrativo
+Ricardo Daniel,Moya Varas,0000-00-00 00:00:00,OSRN,17.049.232-3,rmoya@redtelingenieria.cl,Tecnico
+Cristian Fabian,Prieto Manriquez,0000-00-00 00:00:00,OSRN,15.882.111-7,,Tecnico
+Julio Cesar,Godoy Retamal,0000-00-00 00:00:00,PMTT,13.792.089-1,jgodoy@redtelingenieria.cl,Tecnico
+Sergio Hernan,Vira Calfin,0000-00-00 00:00:00,TMCO,17.580.674-1,,Tecnico
+Edgardo Felipe,Ortiz Huala,0000-00-00 00:00:00,OSRN,18.130.101-5,,Tecnico
+Pedro Israel,Quilenan Lopez,0000-00-00 00:00:00,VLDV,13.321.067-9,pquileñan@redtelingenieria.cl,Tecnico
+Dieter Marcelo,Tegtmeier Villouta,2012-05-15 00:00:00,TMCO,10.022.079-2,dtegtmeyer@redtelingenieria.cl,Tecnico
+Luis Exequiel,Calixto Poblete,0000-00-00 00:00:00,VLDV,13.320.719-8,lcalisto@redtelingenieria.cl,Tecnico
+Hector Hernan,Campos Duarte,0000-00-00 00:00:00,VLDV,14.082.895-5,hcampos@redtelingenieria.cl,Tecnico
+Jose Luis,Cumian Pacheco,0000-00-00 00:00:00,VLDV,10.442.159-8,jcumian@redtelingenieria.cl,Tecnico
+Javier Alexis,Estrada Vasquez,0000-00-00 00:00:00,VLDV,16.541.395-4,jestrada@redtelingenieria.cl,Tecnico
+Gabriel Ignacio,Figueroa Jara,0000-00-00 00:00:00,VLDV,17.359.931-5,gfigueroa@redtelingenieria.cl,Tecnico
+Luis Humberto,Galdames Oyarzun,0000-00-00 00:00:00,VLDV,11.425.609-9,lgaldames@redtelingenieria.cl,Tecnico
+Eliseo Eliecer,Gallardo Vargas,0000-00-00 00:00:00,VLDV,13.320.183-1,egallardo@redtelingenieria.cl,Tecnico
+Hector Jose Rodrigo,Gonzalez Mera,0000-00-00 00:00:00,PMTT,14.488.952-5,hgonzalez@redtelingenieria.cl,Tecnico
+Ivan Cristian Alberto,Lattz Belliazzi,0000-00-00 00:00:00,VLDV,14.399.877-0,ilattz@redtelingenieria.cl,Tecnico
+Miguel Angel ,Maechel Vera,0000-00-00 00:00:00,VLDV,16.159.412-1,mmaechel@redtelingenieria.cl,Tecnico
+Jose Rudaldo,Mayorga Mancilla,0000-00-00 00:00:00,VLDV,17.066.715-8,jmayorga@redtelingenieria.cl,Tecnico
+Jorge Armando,Pozas Pitrullanca,0000-00-00 00:00:00,VLDV,14.081.594-2,jpozas@redtelingenieria.cl,Tecnico
+Francisco Javier,Ramirez Olivera,0000-00-00 00:00:00,PMTT,17.360.049-6,framirez@redtelingenieria.cl,Tecnico
+Camilo Daniel,Ruiz Torres,0000-00-00 00:00:00,VLDV,15.884.151-7,cruiz@redtelingenieria.cl,Tecnico
+Juan Jose,Vidal Bravo,0000-00-00 00:00:00,VLDV,13.609.238-3,,Tecnico
+Carlos Adolfo,Diaz Leiva,0000-00-00 00:00:00,VLDV,17.201.161-6,,Tecnico
+David Exequiel,Bustos Flandez,0000-00-00 00:00:00,VLDV,18.591.423-2,dbustos@redtelingenieria.cl,Tecnico
+Diego Alfonso,Prado Reyes,0000-00-00 00:00:00,VLDV,14.081.554-3,dprado@redtelingenieria.cl,Tecnico
+Guillermo Adolfo ,Diaz Leiva,2012-05-16 00:00:00,VLDV,12.200.618-2,,Administrativo
+Osvaldo Rodrigo,Monares Venegas,2012-05-16 00:00:00,VLDV,13.955.238-5,omonares@redtelingenieria.cl,Administrativo
+Cristopher Artidoro,Fuentes Ide,0000-00-00 00:00:00,VLDV,15.548.743-7,,Administrativo
+Daniela Judith,Ojeda Catricheo,0000-00-00 00:00:00,VLDV,17.963.473-2,,Administrativo
+Elena Carolina,Santana Viveros,0000-00-00 00:00:00,VLDV,16.320.512-2,,Administrativo
+Luis Hernan,Arcos Burgos,0000-00-00 00:00:00,VLDV,14.280.829-3,,Administrativo
+Sandra Viviana,Gomez Arancibia,0000-00-00 00:00:00,VLDV,11.325.534-k,,Administrativo
+Fresia Margoth,Yevenes Vidal,0000-00-00 00:00:00,PMTT,17.762.320-2,fyevenes@redtelingenieria.cl,Administrativo
+Luis Antonio,Aguilar Ojeda,0000-00-00 00:00:00,PMTT,11.713.804-6,,Tecnico
+Claudio Rodrigo,Azocar Guineo,0000-00-00 00:00:00,PMTT,12.343.864-7,cazocar@redtelingenieria.cl,Tecnico
+Bruno Eduardo,Bayer Vera,0000-00-00 00:00:00,PMTT,13.405.598-7,,Tecnico
+Marco Antonio,Cadin Cadin,0000-00-00 00:00:00,PMTT,18.028.100-2,ccadin@redtelingenieria.cl,Tecnico
+Juan Luis,Campos Maldonado,0000-00-00 00:00:00,PMTT,7.857.590-5,,Tecnico
+Patricio,Guenel Barrientos,0000-00-00 00:00:00,PMTT,13.322.780-6,pguenel@redtelingenieria.cl,Tecnico
+Christian Ignacio,Hernandez Seron,0000-00-00 00:00:00,PMTT,15.285.117-0,chernandez@redtelingenieria.cl,Tecnico
+Juan Antonio,Navarro Arteaga,0000-00-00 00:00:00,PMTT,13.123.967-k,jnavarro@redtelingenieria.cl,Tecnico
+Mauricio Andres,Navarro Obando,0000-00-00 00:00:00,PMTT,12.753.237-0,mnavarro@redtelingenieria.cl,Tecnico
+Brian Aliro,Moreira Molina,0000-00-00 00:00:00,PMTT,15.904.134-4,bmoreira@redtelingenieria.cl,Tecnico
+Mauricio Andres,Olivera Matamala,0000-00-00 00:00:00,PMTT,12.336.901-7,,Tecnico
+Jorge Rene,Ramirez de la Barra,0000-00-00 00:00:00,PMTT,13.650.694-3,,Tecnico
+Juan Andres,Vargas Arellano,0000-00-00 00:00:00,PMTT,15.847.538-3,jvargas@redtelingenieria.cl,Tecnico
+Ivan Patricio,Traillanca Fuentealba,0000-00-00 00:00:00,PMTT,12.338.047-9,itraillanca@redtelingenieria.cl,Tecnico
+Hector Danilo,Yentzen Subiabre,0000-00-00 00:00:00,PMTT,16.461.032-2,hyentzen@redtelingenieria.cl,Tecnico
+Carlos Javier,Oyarzo Acevedo,0000-00-00 00:00:00,PMTT,16.116.174-8,,Tecnico
+Leonardo Moises,Neilaf Gonzalez,0000-00-00 00:00:00,PMTT,15.458.033-6,,Administrativo
+Cesar Roberto,Montalva Herrera,0000-00-00 00:00:00,OSRN,17.123.712-2,,Tecnico
+Jean Andres,Fierro Cotiart,0000-00-00 00:00:00,VLDV,17.512.428-4,jfierro@redtelingenieria.cl,Tecnico
+Javier Alexis,Mendoza Salinas,0000-00-00 00:00:00,VLDV,16.465.374-9,jmendoza@redtelingenieria.cl,Tecnico
+Miguel Angel,Pavez Fajardo,2012-10-18 00:00:00,PMTT,7.336.604-6,mpavez@redtelingenieria.cl,Administrativo
+Cristian Carlos,Velasquez Garrido,2012-06-15 00:00:00,PMTT,16.707.928-8,cvelasquez@redtelingenieria.cl,Tecnico
+David Exequiel,Bustos Flandez,0000-00-00 00:00:00,VLDV,18.591.423-2,dbustos@redtelingenieria.cl,Administrativo
+Ernesto Eduardo,Vargas Yonco,0000-00-00 00:00:00,VLDV,18.886.197-0,,Tecnico
+Robinson Edgardo,Duhalde Tatter,2012-07-17 00:00:00,VLDV,10.292.874-1,rduhalde@redtelingenieria.cl,Tecnico
+Franco Mauricio,Niklitschek Nunez,0000-00-00 00:00:00,PMTT,18.204.927-1,,Tecnico
+Ewaldo Andres,Hott Carcamo,2012-07-04 00:00:00,OSRN,16.338.887-1,ehott@redtelingenieria.cl,Administrativo
+Ewaldo Andres,Hott Carcamo,2012-07-04 00:00:00,OSRN,16.338.887-1,ehott@redtelingenieria.cl,Tecnico
+Mauricio Alejandro ,Bustos Bustos,0000-00-00 00:00:00,OSRN,15.274.879-5,mbustos@redtelingenieria.cl,Tecnico
+Raul Alexis,Alvarado Ulloa,0000-00-00 00:00:00,PMTT,15.711.802-1,,Tecnico
+Mario Antonio,Ojeda Seron,0000-00-00 00:00:00,PMTT,17.033.735-2,,Tecnico
+Crhistopher Peter,Salamanca Herrera,0000-00-00 00:00:00,TMCO,17.914.848-k,,Tecnico
+Joel Omar,Garnica Nancumil,0000-00-00 00:00:00,TMCO,16.929.743-6,,Tecnico
+Jose Segundo,Barrientos Catalan,0000-00-00 00:00:00,VLDV,9.436.761-1,,Tecnico
+Camilo Marcelo,Burgos Bustos,2012-08-01 00:00:00,VLDV,12.749.783-4,cburgos@redtelingenieria.cl,Administrativo
+Camilo Marcelo,Burgos Bustos,2012-08-01 00:00:00,VLDV,12.749.783-4,cburgos@redtelingenieria.cl,Tecnico
+David Moises,Gonzalez Nunez,0000-00-00 00:00:00,PMTT,17.537.864-2,,Tecnico
+Ivan Alejandro,Igor Igor,0000-00-00 00:00:00,PMTT,19.456.863-0,,Tecnico
+Maria Pia,Zuniga Aguilera,0000-00-00 00:00:00,OSRN,14.108.335-k,,Administrativo
+Guido Hernan,Alvarado Gutierrez,0000-00-00 00:00:00,PMTT,16.585.862-k,,Tecnico
+Sergio antonio,Hernandez Guzman,0000-00-00 00:00:00,PMTT,18.129.414-0,,Tecnico
+Jose Eugenio,Gutierrez Valencia,0000-00-00 00:00:00,PMTT,14.340.566-4,,Tecnico
+Claudio Ivan,Jerez Zurita,0000-00-00 00:00:00,VLDV,11.425.718-4,,Administrativo
+Yerson Jorge Jesus,Miranda Contreras,0000-00-00 00:00:00,VLDV,18.886.388-4,,Tecnico
+Francia Daniela,Miranda Borquez,2012-09-20 00:00:00,VLDV,17.639.688-1,fmiranda@redtelingenieria.cl,Administrativo
+Carlos Ivan,Campos Maldonado,0000-00-00 00:00:00,PMTT,9.464.231-0,,Tecnico
+Leopoldo Andres,Valdez Sanchez,0000-00-00 00:00:00,VLDV,15.261.003-3,,Tecnico
+Yohana Francisca    ,Arriagada Ramon    ,2013-01-02 00:00:00,TMCO,18.728.500-3,yarriagada@redtelingenieria.cl,Tecnico
+Yessica Carolina,Gomez Villarruel,2013-03-01 00:00:00,OSRN,15.687.643-7,ygomez@redtelingenieria.cl,Administrativo
+Alan Reinaldo,Cartes Pena,2015-01-09 00:00:00,VLDV,18.132.774-k,acartes@redtelingenieria.cl,Administrativo
+Carlos Alberto,Vera Neira,0000-00-00 00:00:00,PMTT,11.503.672-6,,Tecnico
+Yohana Francisca    ,Arriagada Ramon    ,2013-01-02 00:00:00,TMCO,18.728.500-3,yarriagada@redtelingenieria.cl,Administrativo
+Marcelo Alejandro ,Diaz Gesell,0000-00-00 00:00:00,VLDV,18.888.986-7,marcelo.a.gesell@gmail.com,Tecnico
+Diego Alejandro,Ribertt Castro,2012-12-15 00:00:00,VLDV,17.066.921-5,dribertt@redtelingenieria.cl,Administrativo
+Nelson Ferrer,Ascencio Hermosilla,0000-00-00 00:00:00,OSRN,18.427.297-0,,Tecnico
+Jose Guillermo,Anual Jaramillo,2013-01-02 00:00:00,CSTR,12.432.543-9,janual@redtelingenieria.cl,Administrativo
+Jonnathan David,Fuentes Ide,2013-03-01 00:00:00,VLDV,17.068.639-K,jfuentes@redtelingenieria.cl,Administrativo
+Luis Rodrigo,Leal Olivarez,2013-05-12 00:00:00,VLDV,18.886.694-8,lleal@redtelingenieria.cl,Tecnico
+Giovanni Franco,Ramirez Mardones,0000-00-00 00:00:00,OSRN,18.131.380-3,,Tecnico
+Gonzalo Sebastian,Morales Morales,0000-00-00 00:00:00,PMTT,18.735.851-5,,Tecnico
+Jonathan Phillipe,Darmendrail Retamal,0000-00-00 00:00:00,VLDV,17.068.406-0,,Tecnico
+Juan Harry,Plaza de los Reyes Mansilla,2013-01-28 00:00:00,PMTT,15.298.237-2,jplaza@redtelingenieria.cl,Administrativo
+Luis Alejandro,Zuniga Fuentealba,2013-02-01 00:00:00,CNCP,18.132.521-6,lzuniga@redtelingenieria.cl,Tecnico
+Cristian Alejandro,Molina Bahamonde,0000-00-00 00:00:00,PMTT,17.358.519-5,,Tecnico
+Jose Antonio,Ruiz Escobar,2013-02-01 00:00:00,TMCO,10.830.555-k,aruiz@redtelingenieria.cl,Administrativo
+Hernan Segundo,Nail Barrientos,0000-00-00 00:00:00,PMTT,15.298.962-8,hnail@redtelingenieria.cl,Administrativo
+Reynaldo Feliciano,Alfaro Ahumada,0000-00-00 00:00:00,OSRN,16.971.229-8,,Tecnico
+Maichol German,Donoso Hernandez,0000-00-00 00:00:00,PMTT,18.204.520-9,,Tecnico
+Pedro Eduardo,Munoz Mendoza,0000-00-00 00:00:00,VLDV,13.817.421-2,,Tecnico
+Freddy Patricio,Blanco Andrade,0000-00-00 00:00:00,PMTT,16.811.304-8,,Tecnico
+Jose Guillermo,Ulloa Ulloa,0000-00-00 00:00:00,PMTT,17.587.137-3,,Tecnico
+Daniel Osvaldo,San Martin Cerda,0000-00-00 00:00:00,PMTT,15.656.077-4,,Tecnico
+Rudi Andres Javier,Silva Santana,0000-00-00 00:00:00,VLDV,15.548.574-4,rsilva@redtelingenieria.cl,Tecnico
+Jose Antonio,Ruiz Escobar,2013-02-01 00:00:00,TMCO,10.830.555-k,aruiz@redtelingenieria.cl,Tecnico
+Marco Antonio,Cristi Rodriguez,0000-00-00 00:00:00,VLDV,12.753.071-8,,Tecnico
+Erwin Arturo,Albornoz Vera,0000-00-00 00:00:00,VLDV,13.815.919-1,,Tecnico
+Francisco Javier,Cuevas Zarete,2013-02-01 00:00:00,VLDV,13.319.461-4,fcuevas@redtelingenieria.cl,Administrativo
+Guillermo Cesar,Coronado Diaz,2013-03-21 00:00:00,VLDV,14.083.168-9,ccoronado@redtelingenieria.cl,Tecnico
+Victor Alfonso,Lopez Flores,0000-00-00 00:00:00,PMTT,17.299.287-0,,Tecnico
+Charlie Jesus,Martinez Wigand,0000-00-00 00:00:00,TMCO,17.916.179-6,,Tecnico
+Pablo Eduardo,Soto Pereira,0000-00-00 00:00:00,PMTT,15.712.414-5,,Tecnico
+Jose Carlos,Miranda Delgado,0000-00-00 00:00:00,TMCO,18.484.970-4,,Tecnico
+Javier Alexis,Bueno Voge,0000-00-00 00:00:00,TMCO,16.314.720-3,,Tecnico
+Byron Alexis,Torres Gallegos,0000-00-00 00:00:00,PMTT,17.997.778-8,,Tecnico
+Sebastian,Gutierrez Benitez,0000-00-00 00:00:00,TMCO,18.439.005-1,,Tecnico
+Luis Rodrigo,Leal Olivarez,2013-05-12 00:00:00,VLDV,18.886.694-8,lleal@redtelingenieria.cl,Administrativo
+Ricardo,Bohle,0000-00-00 00:00:00,VLDV,6.205.652-5,rbohle@redtelingenieria.cl,Administrativo
+Hugo Enrique,Arriagada Albarran,0000-00-00 00:00:00,VLDV,16.716.737-3,,Tecnico
+Ricardo Esteban,Mendez Arriagada,0000-00-00 00:00:00,VLDV,16.207.094-0,rmendez@redtelingenieria.cl,Tecnico
+Francisco Javier,Almonacid Oyarzun,0000-00-00 00:00:00,PMTT,12.759.335-3,,Tecnico
+Bautista Eduardo,Parra Saez,0000-00-00 00:00:00,PMTT,21.869.297-4,,Tecnico
+Diego Ignacio,Burgos Solis,0000-00-00 00:00:00,VLDV,16.871.322-3,dburgos@redtelingenieria.cl,Tecnico
+Saul Hernan,Hidalgo Loaiza,0000-00-00 00:00:00,OSRN,15.896.714-6,,Tecnico
+Alexis Eduardo,Oliva Lopez,0000-00-00 00:00:00,OSRN,17.125.544-9,,Tecnico
+Christian Nicolas,Ojeda Diaz,2013-07-03 00:00:00,VLDV,18.288.524-k,cojeda@redtelingenieria.cl,Administrativo
+Alexis Ernesto,Calderon Vargas,0000-00-00 00:00:00,CSTR,15.301.514-7,,Tecnico
+Diego Nicolas,Miranda Arenas,0000-00-00 00:00:00,CSTR,17.633.766-4,,Tecnico
+Yeral Bryan,Figueroa Hernandez,0000-00-00 00:00:00,VLDV,17.964.232-8,,Tecnico
+Gustavo Andres,Guerrero Rubio,0000-00-00 00:00:00,PMTT,12.934.022-3,,Tecnico
+Juan Luis,Curihuentro Lopez,0000-00-00 00:00:00,TMCO,9.537.619-3,,Tecnico
+Byron Andres,Valenzuela Montoya,0000-00-00 00:00:00,VLDV,17.068.574-1,,Tecnico
+Scarlet Maria Josefina,Carrasco Torres,2014-07-01 00:00:00,VLDV,18.642.882-K,scarrasco@redtelingenieria.cl,Administrativo
+Marco Antonio,Espinoza Caro,2013-08-01 00:00:00,VLDV,12.747.921-6,mespinoza@redtelingenieria.cl,Administrativo
+Valeria Beatriz,Bermedo Gutierrez,2013-08-06 00:00:00,VLDV,15.294.803-4,vbermedo@redtelingenieria.cl,Administrativo
+Miguel Angel,Ojeda Mansilla,0000-00-00 00:00:00,TMCO,15.814.420-4,,Tecnico
+Marco Antonio,Yanez Fuentealba,0000-00-00 00:00:00,TMCO,18.720.410-0,,Tecnico
+Jorge Eduardo,Erices Bizama,0000-00-00 00:00:00,TMCO,18.875.822-3,,Tecnico
+Jorge Lenier,Comicheo Gallardo,0000-00-00 00:00:00,CSTR,16.779.741-5,,Tecnico
+Juan Pablo,Gipoulou Andrade,0000-00-00 00:00:00,CSTR,16.449.111-0,,Tecnico
+Jaime Ivan,Girard anual,0000-00-00 00:00:00,CSTR,10.594.227-3,,Tecnico
+Herlmuth Enrique,Gallardo Mansilla,0000-00-00 00:00:00,PMTT,10.906.542-0,,Tecnico
+Ricardo Esteban ,Yanez Munoz,2013-08-08 00:00:00,PMTT,15.189.268-k,ryanez@redtelingenieria.cl,Tecnico
+Ricardo Esteban ,Yanez Munoz,2013-08-08 00:00:00,PMTT,15.189.268-k,ryanez@redtelingenieria.cl,Administrativo
+Jose Mauricio,Mansilla Mansilla,0000-00-00 00:00:00,PMTT,18.734.564-2,,Tecnico
+Christian Nicolas,Ojeda Diaz,2013-07-03 00:00:00,VLDV,18.288.524-k,cojeda@redtelingenieria.cl,Tecnico
+Fernando,Hurtado Lazcano,0000-00-00 00:00:00,TMCO,7.354.066-6,,Administrativo
+Camilo Antonio,Munoz Yevenes,0000-00-00 00:00:00,VLDV,18.886.151-2,,Tecnico
+Sergio antonio,Hernandez Guzman,0000-00-00 00:00:00,PMTT,18.129.414-0,,Administrativo
+Fernando,Hurtado Lazcano,0000-00-00 00:00:00,TMCO,7.354.066-6,,Tecnico
+Walter Ibaldo,Nahuelquin Velasquez,2013-09-12 00:00:00,PMTT,17.855.765-3,wnahuelquin@redtelingenieria.cl,Administrativo
+Ruperto Segundo,Hernandez Hernandez,0000-00-00 00:00:00,PMTT,7.928.134-4,,Tecnico
+Eduardo Enrique ,Oliva Diaz  ,0000-00-00 00:00:00,PMTT,9.960.368-2,,Tecnico
+Victor Manuel Jesus,Barrientos Carcamo,0000-00-00 00:00:00,VLDV,15.252.734-9,,Tecnico
+Mauricio Javier,Marin Diaz,0000-00-00 00:00:00,PMTT,18.204.698-1,,Tecnico
+Marco Antonio,Espinoza Caro,2013-08-01 00:00:00,VLDV,12.747.921-6,mespinoza@redtelingenieria.cl,Tecnico
+Oscar Arturo,Vidal Rebolledo,0000-00-00 00:00:00,VLDV,18.695.696-6,,Tecnico
+Daniel Fernando,Mansilla Sanchez,0000-00-00 00:00:00,PMTT,17.241.365-k,,Tecnico
+Lilibeth Carolina,Gajardo Medel,0000-00-00 00:00:00,VLDV,13.817.576-6,lgajardo@redtelingenieria.cl,Administrativo
+Carlos armando,Villanueva Veloso,0000-00-00 00:00:00,VLDV,17.512.245-1,,Tecnico
+Mauricio Javier,Marin Diaz,0000-00-00 00:00:00,PMTT,18.204.698-1,,Administrativo
+Rodrigo Javier,Franchino Quintrileo,0000-00-00 00:00:00,TMCO,16.553.723-8,,Tecnico
+Jorge Esteban,Estroz Jaramillo,0000-00-00 00:00:00,VLDV,17.963.311-6,,Tecnico
+Jacson Humberto,Trivino Reinoso,0000-00-00 00:00:00,CSTR,16.158.547-5,,Tecnico
+Alex Horacio,Olate Parra,2013-12-09 00:00:00,OSRN,9.459.509-6,aolate@redtelingenieria.cl,Administrativo
+Franklin Esteban,Toledo Fierro,0000-00-00 00:00:00,CNCP,13.806.791-2,,Tecnico
+Luis Alfonso,Figueroa Pailamilla,0000-00-00 00:00:00,TMCO,19.194.869-6,,Tecnico
+Eduardo Andres,Sobarzo Borquez,0000-00-00 00:00:00,VLDV,19.248.487-1,,Tecnico
+Rodrigo Andres,Macias Alvarado,0000-00-00 00:00:00,VLDV,15.952.726-3,rmacias@redtelingenieria.cl,Administrativo
+Claudio Angelo,Molina Calderon,0000-00-00 00:00:00,PMTT,19.232.978-7,,Tecnico
+Patricia Alejandra,Miranda Vargas,0000-00-00 00:00:00,VLDV,11.591.064-7,pmiranda@redtelingenieria.cl,Administrativo
+Camilo Ignacio,Oyarzo Higueras,0000-00-00 00:00:00,PMTT,19.028.536-7,,Tecnico
+David Jonathan,Diaz Carrasco,0000-00-00 00:00:00,CNCP,16.530.936-7,,Tecnico
+Daniel Enrique,Diaz Carrasco,0000-00-00 00:00:00,CNCP,15.165.129-1,,Tecnico
+Hector Rodolfo,Pavez Pavez,0000-00-00 00:00:00,CNCP,18.319.235-3,,Tecnico
+Erwin Mauricio,Valladares Castillo,0000-00-00 00:00:00,VLDV,10.446.583-8,,Tecnico
+Daniel Alexis,Ortega Escobar,0000-00-00 00:00:00,CNCP,15.648.615-9,,Tecnico
+Jonathan Ignacio,Gipoulou Oyarzun,0000-00-00 00:00:00,CSTR,17.718.056-4,,Tecnico
+Juan Jesus,Rosas Fernandez,0000-00-00 00:00:00,VLDV,17.955.063-6,,Tecnico
+Edgardo Alberto   ,Gonzalez Peralta,0000-00-00 00:00:00,OSRN,18.492.066-2,,Tecnico
+Sergio Javier,Hernandez Cartes,0000-00-00 00:00:00,VLDV,18.700.211-7,,Tecnico
+Camilo Alberto,Retamal Perez,2014-01-20 00:00:00,VLDV,16.464.304-2,cretamal@redtelingenieria.cl,Administrativo
+Roxana Andrea,Gonzalez Martinez,2014-03-01 00:00:00,VLDV,15.548.084-k,rgonzalez@redtelingenieria.cl,Administrativo
+Maurizio Alberto,Schettino San Martin,0000-00-00 00:00:00,PMTT,16.767.770-3,mschettino@redtelingenieria.cl,Administrativo
+Victor Daniel,Quezada Subiabre,2014-02-01 00:00:00,VLDV,16.160.933-1,vquezada@redtelingenieria.cl,Administrativo
+Matias Egardo,Lillo Valenzuela,0000-00-00 00:00:00,VLDV,18.592.053-4,,Tecnico
+Pablo Isaac,Godoy Aguilera,0000-00-00 00:00:00,VLDV,18.289.004-9,,Tecnico
+Cesar ignacio,Calixto Donoso,0000-00-00 00:00:00,PMTT,17.507.761-8,,Tecnico
+Orlando,Soto Osorio,2014-03-01 00:00:00,TMCO,10.089.714-8,osoto@redtelingenieria.cl,Administrativo
+Pablo,Lopez Fernandez,0000-00-00 00:00:00,TMCO,23.788.908-8,plopez@redtelingenieria.cl,Tecnico
+Claudio Hugo,Parra perez,0000-00-00 00:00:00,VLDV,13.609.090-9,,Tecnico
+Carlos Ivan,Torres Barria,0000-00-00 00:00:00,PMTT,17.238.315-7,,Tecnico
+Guillermo Hernan,Guala Solis,0000-00-00 00:00:00,VLDV,12.748.542-9,,Tecnico
+Felipe Antonio,Rios Cifuentes,0000-00-00 00:00:00,PMTT,18.196.062-0,,Tecnico
+Cristian Benjamin,Calderon Villarroel,0000-00-00 00:00:00,PMTT,13.057.860-8,,Tecnico
+Rodrigo Antonio,Mansilla Cardenas,0000-00-00 00:00:00,PMTT,10.816.503-0,,Tecnico
+Ramiro Andres,Vargas Vargas,0000-00-00 00:00:00,PMTT,15.282.392-4,,Tecnico
+Mirko  Sbonimir,Stanislav  Franulich,0000-00-00 00:00:00,PMTT,16.313.111-0,mirko_16@hotmail.com,Tecnico
+Hector Ariel Ivan,Alvarez Fuentealba,0000-00-00 00:00:00,VLDV,15.759.729-9,,Tecnico
+Miguel Angel,Ampuero Kusch,0000-00-00 00:00:00,PMTT,17.630.774-9,,Tecnico
+Walther Andres,Baschmann Rosas,0000-00-00 00:00:00,OSRN,17.532.710-K,,Tecnico
+Danilo Hernan,Chavez Villablanca,0000-00-00 00:00:00,TMCO,19.197.337-2,,Tecnico
+Hector Ruben,Mayorga Rodriguez,0000-00-00 00:00:00,TMCO,10.106.661-4,,Tecnico
+Ambrosio Renan,Hernandez Guzman,0000-00-00 00:00:00,TMCO,11.501.244-4,,Tecnico
+Gonzalo Ignacio,Zeballos Soto,0000-00-00 00:00:00,CNCP,16.010.780-4,gzeballos@redtelingenieria.cl,Administrativo
+Rodrigo Marcelo ,Angulo Aguilar,0000-00-00 00:00:00,VLDV,11.324.057-1,,Tecnico
+Laura Magdalena,Conapiao Conapiao,0000-00-00 00:00:00,VLDV,14.610.981-0,,Tecnico
+Cristian Andres,Quezada Martinez ,0000-00-00 00:00:00,PMTT,16.397.662-5,,Tecnico
+Robinson Alexis,Castro Paredes,0000-00-00 00:00:00,TMCO,17.742.292-4,,Tecnico
+Alan,Boock,0000-00-00 00:00:00,PMTT,14.291.352-6,,Tecnico
+Cristian,Montesinos,0000-00-00 00:00:00,PMTT,18.156.817-8,,Tecnico
+Mitssio Emery,Vasquez Lopez,0000-00-00 00:00:00,PMTT,18.568.889-5,mvasquez@redtelingenieria.cl,Administrativo
+Juan Alejandro,Ivanni Pardo,0000-00-00 00:00:00,PMTT,11.620.079-1,,Tecnico
+Jose Francisco,Paillalef Umana,0000-00-00 00:00:00,OSRN,16.343.661-2,jPaillalef@redtelingenieria.cl,Tecnico
+Luis Alejandro,Cravero Girard,0000-00-00 00:00:00,CSTR,17.694.227-4,,Tecnico
+Jerson Andres,Perez Fierro,0000-00-00 00:00:00,VLDV,17.511.796-2,,Tecnico
+Victor Antonio,Obando Trujillo,0000-00-00 00:00:00,VLDV,17.359.171-3,,Tecnico
+Isaac Andres,Trujillo Castillo,0000-00-00 00:00:00,PMTT,13.483.698-9,itrujillo@redtelingenieria.cl,Administrativo
+Carlos Alfredo,Correa Martinez,0000-00-00 00:00:00,VLDV,18.321.526-4,,Tecnico
+Luis Alberto,Mujica Fuentes,0000-00-00 00:00:00,VLDV,16.463.973-8,,Administrativo
+Alejandro Jose,Painenanco Gonzalez,2014-07-01 00:00:00,VLDV,17.964.392-8,apainenanco@redtelingenieria.cl,Administrativo
+Victor Aladin,Llanos Mejias,0000-00-00 00:00:00,VLDV,15.492.345-4,,Tecnico
+Carlos Eduardo,Bustos Schindler,0000-00-00 00:00:00,VLDV,10.993.446-1,,Administrativo
+Luis Alejandro,Asencio Uribe,0000-00-00 00:00:00,PMTT,16.490.510-1,,Tecnico
+Cesar Thomas,Guala Palma,0000-00-00 00:00:00,PMTT,19.166.700-k,,Tecnico
+Eduardo Javier,Vargas Vera,0000-00-00 00:00:00,PMTT,18.164.959-3,,Tecnico
+Angela Marcela,Llancamil Carcamo,2014-07-02 00:00:00,VLDV,18.105.181-7,allancamil@redtelingenieria.cl,Administrativo
+Camilo Alberto,Retamal Perez,2014-01-20 00:00:00,VLDV,16.464.304-2,cretamal@redtelingenieria.cl,Tecnico
+Eduardo Benedicto,Rivera Rodriguez,0000-00-00 00:00:00,TMCO,10.225.673-5,,Tecnico
+Maicol Sebastian,Padilla Beroiza,0000-00-00 00:00:00,TMCO,18.437.030-1,,Tecnico
+Alvaro Daniel,Aranda Aranda,0000-00-00 00:00:00,PMTT,17.298.198-4,,Tecnico
+Michael Abel,Villagra Leal,0000-00-00 00:00:00,PMTT,16.584.864-0,,Tecnico
+Claudio Alejandro,Nunez Pacheco,0000-00-00 00:00:00,VLDV,12.993.839-0,,Tecnico
+Nicolas Americo,Aguayo Soto,0000-00-00 00:00:00,PMTT,15.282.714-8,,Tecnico
+Jose Luis,Santana Almonacid,0000-00-00 00:00:00,PMTT,12.538.914-7,,Tecnico
+Felipe Enrique,Calfunao Puinao,0000-00-00 00:00:00,PMTT,18.473.292-0,,Tecnico
+Alonso Esteban,Villarroel Villarroel,0000-00-00 00:00:00,PMTT,15.737.162-2,,Tecnico
+Abraham Cristhian,Gonzalez Pereira,0000-00-00 00:00:00,CNCP,10.828.227-4,agonzalez@redtelingenieria.cl,Tecnico
+Eladio Enrique,Munoz Oliveros,0000-00-00 00:00:00,VLDV,8.931.353-8,emunoz@redtelingenieria.cl,Tecnico
+Gabriel Hipolito,Albornoz Pena,0000-00-00 00:00:00,CNCP,16.213.952-5,gabriel.albornoz85@gmail.com,Tecnico
+Gabriel Hipolito,Albornoz Pena,0000-00-00 00:00:00,CNCP,16.213.952-5,gabriel.albornoz85@gmail.com,Administrativo
+Patricia Alejandra,Miranda Vargas,0000-00-00 00:00:00,VLDV,11.591.064-7,pmiranda@redtelingenieria.cl,Tecnico
+Juan Pablo,Cabrera Jimenez,0000-00-00 00:00:00,VLDV,17.947.510-3,,Tecnico
+Sergio Remigio,Vera Perez,0000-00-00 00:00:00,VLDV,13.588.037-k,,Tecnico
+Jose Luis,Torres Carvallo,2014-08-26 00:00:00,VLDV,13.846.373-7,jltorres@redtelingenieria.cl,Administrativo
+Sergio Gabriel,Villagra Leal,0000-00-00 00:00:00,PMTT,18.130.023-k,,Tecnico
+Angel Gabriel,Castillo Espinaze,0000-00-00 00:00:00,VLDV,21.728.993-9,,Tecnico
+Juan Carlos,Henriquez Delgado,0000-00-00 00:00:00,VLDV,13.589.417-6,,Tecnico
+Marco Aurelio,Alarcon Mora,0000-00-00 00:00:00,PMTT,15.273.658-4,,Tecnico
+Daniel Alejandro,Santana Meza,0000-00-00 00:00:00,PMTT,17.629.712-3,dsantana@redtelingenieria.cl,Tecnico
+Diego Osvaldo,Barria Contreras,0000-00-00 00:00:00,VLDV,17.962.968-2,,Tecnico
+John Daniel,Maldonado Nova,0000-00-00 00:00:00,PMTT,17.297.661-1,,Administrativo
+Eduard Alexis,Guerrero Munoz,0000-00-00 00:00:00,PMTT,19.029.690-3,,Tecnico
+Raul Denis,Carrasco Saavedra,0000-00-00 00:00:00,PMTT,11.357.584-0,,Tecnico
+Lilian Doraliza,Diaz Pinto,0000-00-00 00:00:00,VLDV,10.085.844-4,ldiaz@redtelingenieria.cl,Tecnico
+Guillermo Robinson,Gatica Maldonado,0000-00-00 00:00:00,TMCO,17.881.124-k,,Tecnico
+Luis Mauricio,Yanez Brevil,0000-00-00 00:00:00,VLDV,11.917.968-8,,Tecnico
+Erwin Mauricio,Valladares Castillo,0000-00-00 00:00:00,VLDV,10.446.583-8,,Administrativo
+Gonzalo Ignacio,Zeballos Soto,0000-00-00 00:00:00,CNCP,16.010.780-4,gzeballos@redtelingenieria.cl,Tecnico
+Cesar Felipe,Sandoval Sandoval,2009-01-05 00:00:00,VLDV,13.847.158-6,csandoval@redtelingenieria.cl,Administrativo
+Marco Antonio,Nain Melillan,0000-00-00 00:00:00,PMTT,18.199.112-7,,Tecnico
+Diego Alexis,Oyarzun Gonzalez,0000-00-00 00:00:00,VLDV,17.067.550-9,,Administrativo
+Marco Javier,Vera Catalan,2014-10-01 00:00:00,OSRN,16.584.307-k,mvera@redtelingenieria.cl,Tecnico
+Brallan Esteban,Salazar Villegas,0000-00-00 00:00:00,VLDV,17.583.207-6,,Tecnico
+Armando Ivan,Nahuelpan Manqui,0000-00-00 00:00:00,VLDV,11.324.772-K,anahuelpan@redtelingenieria.cl,Tecnico
+Carlos Hector ,Perez Montecinos,0000-00-00 00:00:00,VLDV,8.171.023-6,cperez@redtelingenieria.cl,Tecnico
+Orlando Enrique,Parada Jaramillo,0000-00-00 00:00:00,VLDV,6.351.760-7,oparada@redtelingenieria,Tecnico
+Laura Javiera Fernanda,Castro Abello,2014-10-27 00:00:00,VLDV,18.174.381-6,jcastro@redtelingenieria.cl,Administrativo
+Hugo Roberto,Soto Chacon,0000-00-00 00:00:00,PMTT,17.199.004-1,,Tecnico
+Pablo Andres,Lagos Carcamo,0000-00-00 00:00:00,VLDV,16.806.501-9,,Administrativo
+Jonathan Rene,Alvarado Munoz,0000-00-00 00:00:00,PMTT,18.204.771-6,,Tecnico
+Claudio Patricio,Tejeda Torres,0000-00-00 00:00:00,PMTT,13.735.805-0,,Tecnico
+Claudio Ariel,Navarrete Kaempfer,2014-11-04 00:00:00,TMCO,10.778.577-9,cnavarrete@redtelingenieria.cl,Administrativo
+Pedro Alexis,Antilen Catril,0000-00-00 00:00:00,VLDV,13.964.681-9,pantilen@redtelingenieria.cl,Tecnico
+Augusto Agustin,Oyarzun Lobos,0000-00-00 00:00:00,TMCO,5.816.469-0,,Tecnico
+Cesar Antonio,Osorio Torres,0000-00-00 00:00:00,PMTT,17.035.798-1,,Tecnico
+Jorge Luis,Solis Martin,2011-07-01 00:00:00,VLDV,15.759.368-4,jsolis@redtelingenieria.cl,Administrativo
+Claudio Ariel,Navarrete Kaempfer,2014-11-04 00:00:00,TMCO,10.778.577-9,cnavarrete@redtelingenieria.cl,Tecnico
+Jose Ignacio,Contreras Acevedo,2014-11-04 00:00:00,VLDV,15.784.687-6,jcontreras@redtelingenieria.cl,Tecnico
+Jose Miguel,Vargas Martinez,0000-00-00 00:00:00,TMCO,19.127.199-8,,Tecnico
+Benjamin Jose,Gallardo Huilipan,0000-00-00 00:00:00,TMCO,19.541.892-6,,Tecnico
+Matias Nicolas,Vargas Gonzalez,2014-11-25 00:00:00,PMTT,19.540.467-4,nvargas@redtelingenieria.cl,Tecnico
+Matias Nicolas,Vargas Gonzalez,2014-11-25 00:00:00,PMTT,19.540.467-4,nvargas@redtelingenieria.cl,Administrativo
+Claudio Andres,Carcamo Poveda,0000-00-00 00:00:00,PMTT,19.027.641-4,,Tecnico
+Carlos Albino,Olavarria Barria,0000-00-00 00:00:00,PMTT,19.437.701-0,colavarria@redtelingenieria.cl,Tecnico
+Henry Rafael ,Retamales Calbun,2014-11-24 00:00:00,OSRN,12.754.580-4,hretamales@redtelingenieria.cl,Administrativo
+Ricardo Sebastian,Ruiz Maldonado,0000-00-00 00:00:00,PMTT,17.631.306-4,,Tecnico
+Guillermo Raul,Hernandez Alvarez,2014-12-01 00:00:00,PMTT,13.822.903-3,ghernandez@redtelingenieria.cl,Administrativo
+Krovan Andres,Barichivich Garrido,0000-00-00 00:00:00,VLDV,19.554.059-4,,Tecnico
+Henry Rafael ,Retamales Calbun,2014-11-24 00:00:00,OSRN,12.754.580-4,hretamales@redtelingenieria.cl,Tecnico
+Daniel Angelo,Araya Toledo,0000-00-00 00:00:00,VLDV,13.458.683-4,danielarayatoledo@gmail.com,Tecnico
+Claudio Hernan,Carcamo Mansilla,0000-00-00 00:00:00,PMTT,13.167.758-8,,Tecnico
+Ricardo Andres,Escalona Millavil,2015-01-22 00:00:00,VLDV,17.694.114-6,rescalona@redtelingenieria.cl,Administrativo
+Jose Ignacio ,Faundez Alvarez,0000-00-00 00:00:00,CNCP,18.623.672-6,,Tecnico
+Juan Eduardo  ,Martinez Cumillanca,0000-00-00 00:00:00,VLDV,15.815.625-3,,Tecnico
+Carlos Hernan,Moreira RIvera,0000-00-00 00:00:00,PMTT,17.490.754-4,,Tecnico
+Luis Felipe,Moraga Silva,0000-00-00 00:00:00,PMTT,16.545.944-k,,Tecnico
+Jorge Javier,Martinez Lovera,0000-00-00 00:00:00,VLDV,17.694.015-8,,Tecnico
+Jaime Andres ,Vasquez Leal,0000-00-00 00:00:00,VLDV,16.941.380-0,,Tecnico
+Juan Carlos,Gajardo Cortez,0000-00-00 00:00:00,TMCO,12.565.229-8,,Tecnico
+Sebastian Mauricio,Diaz Gonzalez,0000-00-00 00:00:00,PMTT,13.967.916-4,,Tecnico
+Beatriz del Carmen ,Alvarez Neiman,0000-00-00 00:00:00,VLDV,15.261.667-8,balvarez@redtelingenieria.cl,Administrativo
+Juan Carlos,Gajardo Cortez,0000-00-00 00:00:00,TMCO,12.565.229-8,,Administrativo
+Marco Andres,Pena Catricheo,0000-00-00 00:00:00,VLDV,15.547.268-5,,Tecnico
+Salomon Andres,Gallegos Villegas,0000-00-00 00:00:00,CNCP,16.062.072-2,andres.gallegosv@gmail.com,Tecnico
+Tito Guillermo,Caceres Cuell,0000-00-00 00:00:00,PMTT,16.975.700-3,,Tecnico
+Marco Francisco,Molina Hidalgo,0000-00-00 00:00:00,PMTT,18.387.974-k,mmolina@redtelingenieria.cl,Tecnico
+Jose Luis,Chacano Nunez,2015-04-01 00:00:00,VLDV,15.883.932-6,jchacano@redtelingenieria.cl,Administrativo
+Guillermo Cesar,Coronado Diaz,2013-03-21 00:00:00,VLDV,14.083.168-9,ccoronado@redtelingenieria.cl,Administrativo
+Mauricio Eduardo,Carcamo Diaz,0000-00-00 00:00:00,PMTT,16.237.919-4,,Tecnico
+Jose Arnoldo,Vargas Oyarzun,0000-00-00 00:00:00,PMTT,19.166.269-5,javargas@redtelingenieria.cl,Administrativo
+Claudio Andres,Carcamo Poveda,0000-00-00 00:00:00,PMTT,19.027.641-4,,Administrativo
+Guillermo Raul,Hernandez Alvarez,2014-12-01 00:00:00,PMTT,13.822.903-3,ghernandez@redtelingenieria.cl,Tecnico
+Jose Luis,Aguirre Riquelme,0000-00-00 00:00:00,CNCP,15.167.444-5,,Tecnico
+Carmen Gloria,Pacheco Garces,0000-00-00 00:00:00,TMCO,6.479.569-4,,Administrativo
+Victor Manuel,Bastias Alarcon,0000-00-00 00:00:00,TMCO,16.396.048-6,,Tecnico
+Eladio Mauricio Alejandro,Ulloa Perez,2015-04-13 00:00:00,VLDV,16.159.731-7,eulloa@redtelingenieria.cl,Administrativo
+Arturo Alberto,Laux Rodriguez,0000-00-00 00:00:00,VLDV,12.468.039-5,,Tecnico
+Ricardo Elias,Rivera Ruiz,2015-04-27 00:00:00,CNCP,8.360.051-9,rrivera@redtelingenieria.cl,Administrativo
+Miguel Angel,Castro Perez,0000-00-00 00:00:00,VLDV,9.225.125-k,,Administrativo
+CHRISTIAN JAVIER,NAHUELCHEO MELLA,0000-00-00 00:00:00,TMCO,13.317.485-0,,Tecnico
+Carlos Francisco,Cifuentes Cifuentes,0000-00-00 00:00:00,VLDV,15.182.900-7,,Tecnico
+Tito Guillermo,Caceres Cuell,0000-00-00 00:00:00,PMTT,16.975.700-3,,Administrativo
+Tito Guillermo,Caceres Cuell,0000-00-00 00:00:00,PMTT,16.975.700-3,,Vendedor
+Cristian Roy,Ponce Ponce,0000-00-00 00:00:00,VLDV,13.819.042-0,,Tecnico
+Rodrigo Alejandro,Chavez Madrazo,2015-05-04 00:00:00,VLDV,15.414.570-2,rchavez@redtelingenieria.cl,Administrativo
+Ricardo Alfredo,Cifuentes Urra,2015-05-18 00:00:00,LANG,9.436.086-2,rcifuentes@redtelingenieria.cl,Administrativo
+Ricardo Alfredo,Cifuentes Urra,2015-05-18 00:00:00,LANG,9.436.086-2,rcifuentes@redtelingenieria.cl,Tecnico
+Mario Anyelo,Rauque Torres,0000-00-00 00:00:00,VLDV,15.896.558-5,,Tecnico
+Bryan Manuel,San Martin San Martin,2015-05-30 00:00:00,TMCO,18.857.447-5,bsanmartin@redtelingenieria.cl,Administrativo
+Denny Alejandro,Alvarado Riquelme,0000-00-00 00:00:00,CNCP,8.891.436-8,,Tecnico
+Claudio Andres,Mendoza Rodriguez,0000-00-00 00:00:00,CNCP,13.963.163-3,,Tecnico
+Rene del Carmen,Villegas Espinoza,0000-00-00 00:00:00,CNCP,9.518.026-4,,Tecnico
+Freddy,Vidal Rebolledo,0000-00-00 00:00:00,CNCP,10.342.204-3,,Tecnico
+David Andres,Poblete Lopez,0000-00-00 00:00:00,CNCP,13.965.321-1,,Tecnico
+Christian Alejandro,Aedo Quinones,0000-00-00 00:00:00,CNCP,13.964.140-K,,Tecnico
+Jorge E,Neira Ferrada,0000-00-00 00:00:00,CNCP,14.220.519-k,,Tecnico
+Ignacio Rene,Cabrera Iturra,0000-00-00 00:00:00,CNCP,18.803.850-6,,Tecnico
+Luis,Munoz Baeza,0000-00-00 00:00:00,CNCP,6.166.791-1,,Tecnico
+Francisco Jose,Ramirez Diaz,0000-00-00 00:00:00,CNCP,13.197.039-0,,Tecnico
+Celso,Melgarejo Gonzalez,0000-00-00 00:00:00,CNCP,16.282.997-1,,Tecnico
+Cristian,Fuentes Carvalho,0000-00-00 00:00:00,CNCP,9.537.689-4,,Tecnico
+Cesar Alexis ,Riquelme Aguayo,0000-00-00 00:00:00,VLDV,12.922.089-9,,Tecnico
+Bernardo Alejandro,Cabrera Turra,0000-00-00 00:00:00,CNCP,12.021.589-2,,Tecnico
+Alfredo Gustavo ,Valderrama Orrego,0000-00-00 00:00:00,VLDV,14.390.367-2,,Administrativo
+Patricio Alejandro,Ayala Catrien,0000-00-00 00:00:00,CNCP,15.881.336-k,,Administrativo
+Carlos Francisco,Cifuentes Cifuentes,0000-00-00 00:00:00,VLDV,15.182.900-7,,Administrativo
+Cesar Alexis ,Riquelme Aguayo,0000-00-00 00:00:00,VLDV,12.922.089-9,,Administrativo
+Francisco Gustavo,Sanchez Delgadillo,0000-00-00 00:00:00,CNCP,9.025.481-2,,Tecnico
+Patricio Alejandro,Ayala Catrien,0000-00-00 00:00:00,CNCP,15.881.336-k,,Tecnico
+Eduardo Andres,Ruiz Munoz,0000-00-00 00:00:00,OSRN,17.124.137-5,,Tecnico
+Mario Anyelo,Rauque Torres,0000-00-00 00:00:00,VLDV,15.896.558-5,,Administrativo
+Hector Leonel,Sandoval Gajardo,0000-00-00 00:00:00,VLDV,17.360.311-8,hsandoval@redtelingenieria.cl,Tecnico
+Danilo Ignacio,Campos arroyo,0000-00-00 00:00:00,PMTT,17.742.862-0,,Tecnico
+Bryan Manuel,San Martin San Martin,2015-05-30 00:00:00,TMCO,18.857.447-5,bsanmartin@redtelingenieria.cl,Tecnico
+Marco Francisco,Molina Hidalgo,0000-00-00 00:00:00,PMTT,18.387.974-k,mmolina@redtelingenieria.cl,Administrativo
+Mario Gerardo,Ferrada Aguero,0000-00-00 00:00:00,VLDV,13.609.234-0,eferrada@redtelingenieria.cl,Tecnico
+Egon Alberto,Aguila Apablaza,0000-00-00 00:00:00,PMTT,16.112.708-6,,Tecnico
+Laura Magdalena,Conapiao Conapiao,0000-00-00 00:00:00,VLDV,14.610.981-0,,Administrativo
+Carlos Alfonso,Alvarez Jaramillo,0000-00-00 00:00:00,OSRN,19.085.016-1,,Tecnico
+Vanessa Alejandra,Baez Guillaume,2015-07-01 00:00:00,CNCP,10.628.367-2,vbaez@redtelingenieria.cl,Administrativo
+Daniel alejandro,Maureira Maureira,0000-00-00 00:00:00,LANG,17.591.633-4,,Administrativo
+Roberto Alejandro,Aedo Novoa,0000-00-00 00:00:00,TMCO,18.291.521-1,,Tecnico
+Manuel Alejandro,Espinoza Mellado,0000-00-00 00:00:00,TMCO,17.127.101-0,,Tecnico
+Roberto Carlos,Retamal Acuna,0000-00-00 00:00:00,TMCO,13.626.476-1,,Tecnico
+Jose Heriberto,Saez Aguayo,0000-00-00 00:00:00,TMCO,11.577.674-6,,Tecnico
+Mauricio Orlando,Alvarez Jacobsen,2015-07-14 00:00:00,OSRN,13.587.529-5,malvarez@redtelingenieria.cl,Administrativo
+Fernando Bladimir Alexis,Carrasco Curihuinca,0000-00-00 00:00:00,TMCO,17.918.148-7,,Tecnico
+Patricio Esteban,Ruiz Pino,2015-08-01 00:00:00,VLDV,18.592.037-2,pruiz@redtelingenieria.cl,Tecnico
+Teofilo Damian,Concha Cumian,0000-00-00 00:00:00,PMTT,13.609.083-6,tconcha@redtelingenieria.cl,Tecnico
+Teofilo Damian,Concha Cumian,0000-00-00 00:00:00,PMTT,13.609.083-6,tconcha@redtelingenieria.cl,Administrativo
+Luis Eduardo,Castro Diaz,0000-00-00 00:00:00,TMCO,10.002.565-5,lcastro@redtelingenieria.cl,Administrativo
+Victor Andres,Vargas Martinez,0000-00-00 00:00:00,TMCO,16.825.008-8,,Tecnico
+Angel Anibal,Fuentes Ruiz,0000-00-00 00:00:00,CNCP,15.875.578-5,,Tecnico
+Rodrigo Alexis,Imigo Munoz,0000-00-00 00:00:00,TMCO,16.327.693-3,,Tecnico
+Hector Leonel,Sandoval Gajardo,0000-00-00 00:00:00,VLDV,17.360.311-8,hsandoval@redtelingenieria.cl,Administrativo
+Diego Eduardo,Fica Ampuero,2015-09-14 00:00:00,VLDV,17.360.235-9,dfica@redtelingenieria.cl,Administrativo
+Eduardo Enrique,Contreras Saavedra,0000-00-00 00:00:00,CNCP,15.165.529-7,,Tecnico
+Cristian Antonio,Cardenas Alvarado,0000-00-00 00:00:00,PMTT,13.323.655-4,,Tecnico
+Carla Aracely,Quezada Saldivia,0000-00-00 00:00:00,PMTT,16.722.386-9,cquezada@redtelingenieria.cl,Administrativo
+Rodrigo Alejandro,Chavez Madrazo,2015-05-04 00:00:00,VLDV,15.414.570-2,rchavez@redtelingenieria.cl,Tecnico
+Alvaro Mauricio,Delgado Oyarzo,0000-00-00 00:00:00,PMTT,18.802.124-7,,Tecnico
+Fabian Marcelo,Cid Salinas,0000-00-00 00:00:00,TMCO,13.072.966-5,,Tecnico
+Claudio Enrique,Saldivia Ojeda,0000-00-00 00:00:00,VLDV,11.709.435-9,,Tecnico
+Jaime Antonio,Sanchez Ramirez,2012-05-24 00:00:00,VLDV,14.083.061-5,jsanchez@redtelingenieria.cl,Tecnico
+Osvaldo Rodrigo,Monares Venegas,2012-05-16 00:00:00,VLDV,13.955.238-5,omonares@redtelingenieria.cl,Tecnico
+Mauricio Javier,Aguilar Rosas,2012-03-28 00:00:00,VLDV,12.430.837-2,maguilar@redtelingenieria.cl,Tecnico
+Jorge Edgardo,Cordova Paillahueque,0000-00-00 00:00:00,LANG,13.448.699-6,,Tecnico
+Jimmy Alberto,Aguayo Lara,0000-00-00 00:00:00,LANG,18.096.357-k,,Tecnico
+Daniel alejandro,Maureira Maureira,0000-00-00 00:00:00,LANG,17.591.633-4,,Tecnico
+Diego Alexis,Oyarzun Gonzalez,0000-00-00 00:00:00,VLDV,17.067.550-9,,Tecnico
+Cristian Gabriel,Cardenas Munoz,0000-00-00 00:00:00,OSRN,17.996.705-7,,Tecnico

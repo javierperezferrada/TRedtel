@@ -169,12 +169,13 @@ def cargar_usuarios(request):
                     usuarios.User_id = row[0]
                     usuarios.rut = row[7]
                     usuarios.fecha_ingreso = row[8]
-                    usuarios.Area_id = int(row[9])
-                    usuarios.Afp_id = row[10]
-                    usuarios.Salud_id = row[11]
-                    usuarios.CentroCosto_id = row[12]
+                    usuarios.Area = row[9]
+                    usuarios.Afp = row[10]
+                    usuarios.Salud = row[11]
+                    usuarios.CCosto = row[12]
                     usuarios.vencimiento_licencia_conducir = row[13]
-                    usuarios.Cargo_id = row[14]
+                    usuarios.Cargo = row[14]
+                    usuarios.direccion = row[15]
                     usuarios.save()
             return HttpResponseRedirect('/home')
     else:
