@@ -13,7 +13,7 @@ from reportlab.platypus import SimpleDocTemplate, Paragraph
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from io import BytesIO 
 from reportlab.pdfgen import canvas
-from .models import Usuario
+from .models import Usuario, Us
 from .models import Liquidacion
 from django.contrib import messages
 import csv
@@ -28,9 +28,10 @@ def home(request):
    return render_to_response('home.html', {'user': request.user}, context_instance=RequestContext(request))
 
 @login_required()
-def mis_datos(request):
-    usuario = get_object_or_404(Usuario, id=request.user.id)
-    return render_to_response('mis_datos.html', {'usuario': usuario}, context_instance=RequestContext(request))
+def us(request):
+    us = Us.objects.get(id=1)
+    return render_to_response('us.html', {'us': us}, context_instance=RequestContext(request))
+
 
 @login_required()
 def mis_datos(request):
@@ -163,18 +164,18 @@ def cargar_usuarios(request):
                 else:
                     user = User.objects.create_user(id=row[0],
                         username=row[1],first_name = row[2],
-                        last_name=row[3],email=row[4],password=row[5]) 
+                        email=row[4],password=row[5]) 
                     usuarios = Usuario()
                     usuarios.id = row[0]
                     usuarios.User_id = row[0]
                     usuarios.rut = row[7]
                     usuarios.fecha_ingreso = row[8]
-                    usuarios.Area = row[9]
-                    usuarios.Afp = row[10]
-                    usuarios.Salud = row[11]
-                    usuarios.CCosto = row[12]
+                    usuarios.area = row[9]
+                    usuarios.afp = row[10]
+                    usuarios.salud = row[11]
+                    usuarios.ccosto = row[12]
                     usuarios.vencimiento_licencia_conducir = row[13]
-                    usuarios.Cargo = row[14]
+                    usuarios.cargo = row[14]
                     usuarios.direccion = row[15]
                     usuarios.save()
             return HttpResponseRedirect('/home')

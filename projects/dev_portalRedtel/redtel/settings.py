@@ -51,6 +51,15 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.security.SecurityMiddleware',
 )
 
+AUTHENTICATION_BACKENDS = (
+# Redtel
+'mybackend.RedtelBackend',
+
+# Django
+'django.contrib.auth.backends.ModelBackend',
+)
+
+
 ROOT_URLCONF = 'redtel.urls'
 
 TEMPLATES = [

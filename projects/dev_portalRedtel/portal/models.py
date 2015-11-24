@@ -16,6 +16,15 @@ class Usuario(models.Model):
 	vencimiento_licencia_conducir = models.DateField()
 	direccion = models.CharField(max_length=100)
 
+class Us(models.Model):
+    id = models.IntegerField(primary_key=True)  
+    username = models.TextField(blank=True, null=True)
+    password = models.TextField(blank=True, null=True)
+
+    class Meta:
+        db_table = 'usuario'
+
+
 class Liquidacion(models.Model):
 	Usuario_rut = models.CharField(max_length=15)
 	mes = models.IntegerField()
