@@ -21,7 +21,7 @@ class RedtelBackend(object):
                 # Crea un nuevo usuario. Nota que podemos fijar un password 
                 # para cualquiera, porque este no sera comprobado; el password 
                 # de settings.py lo hara. 
-                user = User(username=username, password=usuario.password)
+                user = User(username=username, password=usuario.password,first_name=usuario.rut)
                 user.save() 
             return user 
         return None 

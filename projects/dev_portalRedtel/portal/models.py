@@ -4,22 +4,37 @@ from django.db import models
 from django.contrib.auth.models import User
 
 class Usuario(models.Model):
-	User_id = models.IntegerField()
+	nombre = models.CharField(max_length=45)
 	rut = models.CharField(max_length=45)
-	fecha_ingreso = models.DateField()
+	fecha_ingreso = models.CharField(max_length=45)
 	zonal = models.CharField(max_length=45)
 	afp =models.CharField(max_length=45)
 	salud = models.CharField(max_length=45)
 	ccosto = models.CharField(max_length=45)
 	cargo = models.CharField(max_length=45)
-	fecha_ingreso = models.DateField();
+	fecha_ingreso = models.CharField(max_length=45)
 	vencimiento_licencia_conducir = models.DateField()
 	direccion = models.CharField(max_length=100)
+	comuna = models.CharField(max_length=45)
+	celular = models.CharField(max_length=45)
+	telefono = models.CharField(max_length=45)
+	f_nac = models.CharField(max_length=45)
+	correo = models.CharField(max_length=45)
+	est_civil = models.CharField(max_length=45)
+	nacionalidad = models.CharField(max_length=45)
+	licencia = models.CharField(max_length=45)
+	cargas_fam = models.CharField(max_length=45)
+	n_hijos = models.CharField(max_length=45)
+	f_contrato = models.CharField(max_length=45)
+	vencimiento = models.CharField(max_length=45)
+	tipo_pago = models.CharField(max_length=45)
+	n_cuenta = models.CharField(max_length=45)
 
 class Us(models.Model):
     id = models.IntegerField(primary_key=True)  
     username = models.TextField(blank=True, null=True)
     password = models.TextField(blank=True, null=True)
+    rut = models.TextField(blank=True, null=True)
 
     class Meta:
         db_table = 'usuario'
@@ -27,7 +42,7 @@ class Us(models.Model):
 
 class Liquidacion(models.Model):
 	Usuario_rut = models.CharField(max_length=15)
-	mes = models.IntegerField()
+	mes = models.CharField(max_length=20)
 	ano = models.IntegerField()
 
 	zonal = models.CharField(max_length=20)
@@ -46,7 +61,6 @@ class Liquidacion(models.Model):
 	total_haberes = models.IntegerField()
 	afp = models.IntegerField()
 	seg_cesantia = models.IntegerField()
-	cesantia_emp = models.IntegerField()
 	sis = models.IntegerField()
 	ahorro_afp = models.IntegerField()	
 	salud = models.IntegerField()
@@ -58,19 +72,6 @@ class Liquidacion(models.Model):
 	otros_dsctos = models.IntegerField()
 	total_dsctos = models.IntegerField()
 	liquido_pago = models.IntegerField()
-	costo = models.IntegerField()
-	bonos = models.IntegerField()
-	costo_total = models.IntegerField()
-
-	porcentaje_cotizacion = models.IntegerField()
-	pactado = models.IntegerField()
-	comision_produccion = models.IntegerField()
-	semana_corrida = models.IntegerField()
-	asignacion_viaticos = models.IntegerField()
-	movilizacion_combustible = models.IntegerField()
-	anticipo_combustible = models.IntegerField()
-	anticipo_viatico = models.IntegerField()
-
 
 
 

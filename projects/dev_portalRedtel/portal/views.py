@@ -45,8 +45,7 @@ def mis_datos(request):
 
 @login_required()
 def mis_liquidaciones(request):
-    usuario = get_object_or_404(Usuario, id=request.user.id)
-    liquidaciones = Liquidacion.objects.filter(Usuario_rut=usuario.rut)
+    liquidaciones = Liquidacion.objects.filter(Usuario_rut=request.user.first_name)
     return render_to_response('mis_liquidaciones.html', {'liquidaciones': liquidaciones}, context_instance=RequestContext(request))
 
 @login_required()
@@ -189,31 +188,43 @@ def cargar_liquidaciones(request):
         form = UploadFileForm(request.POST, request.FILES)
         if form.is_valid():
             reader = csv.reader(request.FILES['docfile'])
-            for row in reader:
-                if row[0]=='usuario_rut':
+            index = 0
+            for index,row in enumerate(reader):
+                if index<7:
                     print 'cabecera'
                 else: 
                     liquidaciones = Liquidacion()
-                    liquidaciones.Usuario_rut = row[0]
-                    liquidaciones.mes = row[1]
-                    liquidaciones.ano = row[2]
-                    liquidaciones.porcentaje_cotizacion = row[3]
-                    liquidaciones.pactado = row[4]
-                    liquidaciones.tributable = row[5]
-                    liquidaciones.dias_trabajados = row[6]
-                    liquidaciones.sueldo = row[7]
+                    liquidaciones.Usuario_rut = row[1]
+                    liquidaciones.mes = 'mayo'
+                    liquidaciones.ano = 2015
+                    liquidaciones.zonal = row[2]
+                    liquidaciones.c_costo = row[3]
+                    liquidaciones.dias = row[4]
+                    liquidaciones.sueldo = row[5]
+                    liquidaciones.h_extras = row[6]
+                    liquidaciones.bonos_impon = row[7]
                     liquidaciones.gratificacion = row[8]
-                    liquidaciones.comision_produccion = row[9]
-                    liquidaciones.semana_corrida = row[10]
-                    liquidaciones.asignacion_viaticos = row[11]
-                    liquidaciones.movilizacion_combustible = row[12]
-                    liquidaciones.afp = row[13]
-                    liquidaciones.adiciona_afp = row[14]
-                    liquidaciones.salud = row[15]
-                    liquidaciones.seguro_cesantia = row[16]
-                    liquidaciones.anticipo = row[17]
+                    liquidaciones.total_impon = row[9]
+                    liquidaciones.movilizacion = row[10]
+                    liquidaciones.colacion = row[11]
+                    liquidaciones.otros_no_impon = row[12]
+                    liquidaciones.asig_fam = row[13]
+                    liquidaciones.total_no_impon = row[14]
+                    liquidaciones.total_haberes = row[15]
+                    liquidaciones.afp = row[16]
+                    liquidaciones.seg_cesantia = row[17]
                     liquidaciones.anticipo_combustible = row[18]
-                    liquidaciones.anticipo_viatico = row[19]
+                    liquidaciones.sis = row[19]
+                    liquidaciones.ahorro_afp = row[20]
+                    liquidaciones.salud = row[21]
+                    liquidaciones.mutual = row[22]
+                    liquidaciones.impto_unico = row[23]
+                    liquidaciones.prestamo_ccaf = row[24]
+                    liquidaciones.prestamos = row[25]
+                    liquidaciones.anticipos = row[26]
+                    liquidaciones.otros_dsctos = row[27]
+                    liquidaciones.total_dsctos = row[28]
+                    liquidaciones.liquido_pago = row[29]
                     liquidaciones.save()
             return HttpResponseRedirect('/home')
     else:
