@@ -4,16 +4,15 @@ from django.db import models
 from django.contrib.auth.models import User
 
 class Usuario(models.Model):
+	id=models.AutoField(primary_key=True)
 	nombre = models.CharField(max_length=45)
 	rut = models.CharField(max_length=45)
-	fecha_ingreso = models.CharField(max_length=45)
 	zonal = models.CharField(max_length=45)
 	afp =models.CharField(max_length=45)
 	salud = models.CharField(max_length=45)
 	ccosto = models.CharField(max_length=45)
 	cargo = models.CharField(max_length=45)
 	fecha_ingreso = models.CharField(max_length=45)
-	vencimiento_licencia_conducir = models.DateField()
 	direccion = models.CharField(max_length=100)
 	comuna = models.CharField(max_length=45)
 	celular = models.CharField(max_length=45)
@@ -41,6 +40,7 @@ class Us(models.Model):
 
 
 class Liquidacion(models.Model):
+	id=models.AutoField(primary_key=True)
 	Usuario_rut = models.CharField(max_length=15)
 	mes = models.CharField(max_length=20)
 	ano = models.IntegerField()
@@ -72,7 +72,5 @@ class Liquidacion(models.Model):
 	otros_dsctos = models.IntegerField()
 	total_dsctos = models.IntegerField()
 	liquido_pago = models.IntegerField()
-
-
 
 
