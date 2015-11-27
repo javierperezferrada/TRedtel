@@ -2,10 +2,8 @@
 *.xlsx
 *.sqlite3
 *.csv
-<<<<<<< HEAD
 *docs/*
-=======
->>>>>>> cde57541bf8704a2e7718282534898da3561ab08
+projects/dev_portalRedtel/db.sqlite3
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -43,7 +43,6 @@ class Liquidacion(models.Model):
 	id=models.AutoField(primary_key=True)
 	Usuario_rut = models.CharField(max_length=15)
 	mes = models.CharField(max_length=20)
-	ano = models.IntegerField()
 
 	zonal = models.CharField(max_length=20)
 	c_costo = models.CharField(max_length=40)

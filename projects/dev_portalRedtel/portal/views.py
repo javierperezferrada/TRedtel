@@ -82,7 +82,7 @@ def imprimir_liquidacion(request,pk):
     except ValueError: # Si no existe llamamos a "pagina no encontrada". 
         raise Http404()  
     response = HttpResponse(content_type='application/pdf') 
-    response['Content-Disposition'] = "attachment; filename="+str(liquidacion.mes)+"_"+str(liquidacion.ano)+".pdf"
+    response['Content-Disposition'] = "attachment; filename="+str(liquidacion.mes)+".pdf"
     Q = SimpleDocTemplate(response,rightMargin=72,leftMargin=72,topMargin=72,BottomMargin=18)
     Story = []
     styles = getSampleStyleSheet()
@@ -91,9 +91,7 @@ def imprimir_liquidacion(request,pk):
 
     ptext = 'Rut Trabajador: '+str(liquidacion.Usuario_rut)
     Story.append(Paragraph(ptext,styles["Normal"]))
-    ptext = 'mes: '+str(liquidacion.mes)
-    Story.append(Paragraph(ptext,styles["Normal"]))
-    ptext = 'año: '+str(liquidacion.ano)
+    ptext = 'periodo: '+str(liquidacion.mes)
     Story.append(Paragraph(ptext,styles["Normal"]))
     ptext = 'zonal: '+str(liquidacion.zonal)
     Story.append(Paragraph(ptext,styles["Normal"]))
@@ -205,7 +203,6 @@ def cargar_liquidaciones(request):
                     liquidaciones = Liquidacion()
                     liquidaciones.Usuario_rut = row[1]
                     liquidaciones.mes = mes_data
-                    liquidaciones.ano = 2015
                     liquidaciones.zonal = row[2]
                     liquidaciones.c_costo = row[3]
                     liquidaciones.dias = row[4]
