@@ -204,11 +204,7 @@ def cargar_liquidaciones(request):
                 else: 
                     liquidaciones = Liquidacion()
                     liquidaciones.Usuario_rut = row[1]
-<<<<<<< HEAD
                     liquidaciones.mes = mes_data
-=======
-                    liquidaciones.mes = 'junio'
->>>>>>> cde57541bf8704a2e7718282534898da3561ab08
                     liquidaciones.ano = 2015
                     liquidaciones.zonal = row[2]
                     liquidaciones.c_costo = row[3]
