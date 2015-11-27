@@ -74,5 +74,3 @@ class Liquidacion(models.Model):
 	liquido_pago = models.IntegerField()
 
 
-
-

@@ -2,7 +2,10 @@
 *.xlsx
 *.sqlite3
 *.csv
+<<<<<<< HEAD
 *docs/*
+=======
+>>>>>>> cde57541bf8704a2e7718282534898da3561ab08
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
