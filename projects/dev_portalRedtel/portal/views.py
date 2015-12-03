@@ -9,6 +9,16 @@ from django.shortcuts import render_to_response
 from django.template.context import RequestContext
 from django.contrib.auth.decorators import login_required,permission_required
 from django.http import HttpResponse
+
+
+import os
+#Librerias reportlab a usar:
+from reportlab.platypus import (SimpleDocTemplate, PageBreak, Image, Spacer,
+Paragraph, Table, TableStyle)
+from reportlab.lib.styles import getSampleStyleSheet
+from reportlab.lib.pagesizes import A4
+from reportlab.lib import colors
+
 from reportlab.platypus import SimpleDocTemplate, Paragraph
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from io import BytesIO 
@@ -59,18 +69,17 @@ def obtener_certificado(request):
         raise Http404() 
     respuesta = HttpResponse(content_type = 'application/pdf')
     respuesta['Content-Disposition'] = 'filename = "Certificado_antiguedad_laboral.pdf"'
-    Q = SimpleDocTemplate(respuesta,rightMargin=72,leftMargin=72,topMargin=72,BottomMargin=18)
-    Story = []
+    doc = SimpleDocTemplate(respuesta,rightMargin=72,leftMargin=72,topMargin=72,BottomMargin=18)
+    story = []
     styles = getSampleStyleSheet()
+
     ptext = 'Texto de prueba.'
-    Story.append(Paragraph(ptext,styles["Normal"]))
+    story.append(Paragraph(ptext,styles["Normal"]))
     ptext = 'Rut usuario: '+str(usuario.rut)
-    Story.append(Paragraph(ptext,styles["Normal"]))
+    story.append(Paragraph(ptext,styles["Normal"]))
     ptext = 'Fecha Ingreso: '+str(usuario.fecha_ingreso)
-    Story.append(Paragraph(ptext,styles["Normal"]))
-    ptext = 'Vencimiento Licencia de Conducir: '+str(usuario.vencimiento_licencia_conducir)
-    Story.append(Paragraph(ptext,styles["Normal"]))
-    Q.build(Story)
+    story.append(Paragraph(ptext,styles["Normal"]))
+    doc.build(story)
     respuesta.close()
     return respuesta
  
@@ -79,32 +88,59 @@ def obtener_certificado(request):
 def imprimir_liquidacion(request,pk):   
     try: 
         liquidacion = Liquidacion.objects.get(id=pk) 
+        usuario = Usuario.objects.get(rut=request.user.first_name)
     except ValueError: # Si no existe llamamos a "pagina no encontrada". 
         raise Http404()  
     response = HttpResponse(content_type='application/pdf') 
     response['Content-Disposition'] = "attachment; filename="+str(liquidacion.mes)+".pdf"
-    Q = SimpleDocTemplate(response,rightMargin=72,leftMargin=72,topMargin=72,BottomMargin=18)
+    Q = SimpleDocTemplate(response,rightMargin=30,leftMargin=30,topMargin=20,BottomMargin=5)
     Story = []
     styles = getSampleStyleSheet()
-    ptext = 'Liquidacion de Sueldo.'
-    Story.append(Paragraph(ptext,styles["Normal"]))
-
-    ptext = 'Rut Trabajador: '+str(liquidacion.Usuario_rut)
-    Story.append(Paragraph(ptext,styles["Normal"]))
-    ptext = 'periodo: '+str(liquidacion.mes)
-    Story.append(Paragraph(ptext,styles["Normal"]))
-    ptext = 'zonal: '+str(liquidacion.zonal)
-    Story.append(Paragraph(ptext,styles["Normal"]))
-    ptext = 'centro costo: '+str(liquidacion.c_costo)
-    Story.append(Paragraph(ptext,styles["Normal"]))
-    ptext = 'dias: '+str(liquidacion.dias)
-    Story.append(Paragraph(ptext,styles["Normal"]))
-    ptext = 'Sueldo: '+str(liquidacion.sueldo)
-    Story.append(Paragraph(ptext,styles["Normal"]))
-    ptext = 'Horas extras: '+str(liquidacion.h_extras)
-    Story.append(Paragraph(ptext,styles["Normal"]))
-    ptext = 'Bonos imponibles: '+str(liquidacion.bonos_impon)
-    Story.append(Paragraph(ptext,styles["Normal"]))
+    t = Table([
+        ['Empleador','SERVICIOS E INGENIERIA LTDA','','','','',''],
+        ['R.U.T.','77.869.650-9','','','','',''],
+        ['Dirección','AVDA. PICARTE 3644, INTERIOR, VALDIVIA','','','','',''],
+        ['','','','','','',''],
+        ['','','LIQUIDACION DE SUELDO MES '+liquidacion.mes.upper(),'','','',''],
+        ['','','','','','',''],
+        ['NOMBRE',usuario.nombre,'','','','RUT',usuario.rut],
+        ['C.COSTO',usuario.ccosto,'','','','AREA',usuario.zonal],
+        ['CARGO',usuario.cargo,'','','','FECHA ING',usuario.fecha_ingreso],
+        ['AFP',usuario.afp,'','','','SALUD',usuario.salud],
+        ['DIAS TRABAJADOS',liquidacion.dias,'LICENCIA','','AUSENTE','',''],
+        ['','','','','','',''],
+        ['','','','HABERES','','',''],
+        ['','','','','','',''],
+        ['SUELDO DEL MES','','','','','',liquidacion.sueldo],
+        ['GRATIFICACION','','','','','',liquidacion.gratificacion],
+        ['COMISION PRODUCCION','','','','','',liquidacion.bonos_impon],
+        ['HORAS EXTRAS','','','','','',liquidacion.h_extras],
+        ['TOTAL HABERES IMPONIBLES','','','','','',liquidacion.total_impon],
+        ['ASIGNACION VIATICOS','','','','','',liquidacion.colacion],
+        ['MOVILIZACION COMBUSTIBLE','','','','','',liquidacion.movilizacion],
+        ['TOTAL NO IMPONIBLE','','','','','',liquidacion.total_no_impon],
+        ['TOTAL HABERES','','','','','',liquidacion.total_haberes],
+        ['','','','','','',''],
+        ['','','','DESCUENTOS','','',''],
+        ['','','','','','',''],
+        ['AFP','','','','','',liquidacion.afp],
+        ['SALUD','','','','','',liquidacion.salud],
+        ['SEGURO CESANTIA','','','','','',liquidacion.seg_cesantia],
+        ['TOTAL DESCUENTOS LEGALES','','','','','',''],
+        ['ANTICIPOS','','','','','',''],
+        ['TOTAL OTROS DESCUENTOS','','','','','',liquidacion.otros_dsctos],
+        ['TOTAL DESCUENTOS','','','','','',liquidacion.total_dsctos],
+        ['','','','','','',''],
+        ['','','','','','',''],
+        ['LIQUIDO A PAGAR','','','','','',liquidacion.liquido_pago],
+        ['','','','','','',''],
+        ['','','','','','',''],
+        ['-------------','','','','','','--------------'],
+        ['Firma Representante Legal','','','','','Recibí Conforme(Firma)',''],
+        ['JULIO ZARECHT ORTEGA','','','','',usuario.nombre,''],
+        ['R.U.T.:7.385.055-K','','','','','R.U.T.:'+usuario.rut,''],
+    ], colWidths=80, rowHeights=10)
+    Story.append(t)
     Q.build(Story)
     response.close()
     return response
@@ -248,4 +284,5 @@ def us(request):
             user.password = row[2]
             user.rut = row[1]
             user.save()
+        return HttpResponseRedirect('/home')
 

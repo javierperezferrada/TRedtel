@@ -11,9 +11,7 @@ class RedtelBackend(object):
         'metodo que realizara la autentificacion contra la tabla usuarios' 
         'de redtel.'
         usuario = Us.objects.get(username=username)
-        m= md5.new()
-        m.update(password)
-        encript = m.hexdigest()
+        encript = md5.new(password).hexdigest()
         if encript == usuario.password: 
             try: 
                user = User.objects.get(username=username) 
