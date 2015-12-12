@@ -17,6 +17,7 @@ Paragraph, Table, TableStyle)
 from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.lib.pagesizes import A4
 from reportlab.lib import colors
+from reportlab.lib.units import mm, inch
 from reportlab.platypus import SimpleDocTemplate, Paragraph
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from io import BytesIO 
@@ -61,9 +62,11 @@ def mensajes(request):
         context_instance=RequestContext(request)
     )
 
+@permission_required('portal.puede_eliminar', login_url="/ingresar")
 def eliminar(request, id):
     Mensaje.objects.get(id=id).delete()
     return HttpResponseRedirect('/home/mensajes')
+
 
 @permission_required('portal.puede_enviar', login_url="/ingresar") 
 def nuevo_mensaje(request):
