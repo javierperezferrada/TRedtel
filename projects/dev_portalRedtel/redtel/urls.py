@@ -21,6 +21,7 @@ urlpatterns = patterns('',
                        url(r'^home/mis_liquidaciones/imprimir_liquidacion/(?P<pk>[0-9]+)/$', 'portal.views.imprimir_liquidacion', name='imprimir_liquidacion'),
                        url(r'^home/cargar_usuarios/$', 'portal.views.cargar_usuarios', name='cargar_usuarios'),
                        url(r'^home/cargar_liquidaciones/$', 'portal.views.cargar_liquidaciones', name='cargar_liquidaciones'),
+                       url(r'^home/cargar_liquidaciones/carga_correcta$', 'portal.views.carga_correcta', name='carga_correcta'),
                        url(r'^logout$', logout, {'template_name': 'index.html', }, name="logout"),
 )
 

@@ -167,12 +167,14 @@ def cargar_liquidaciones(request):
                     liquidaciones.total_dsctos = row[28]
                     liquidaciones.liquido_pago = row[29]
                     liquidaciones.save()
-            messages.add_message(request, messages.INFO, "Liquidaciones cargadas Correctamente.")
-            return HttpResponseRedirect('/home')
+            return HttpResponseRedirect('/home/cargar_liquidaciones/carga_correcta')
     else:
         form = UploadFileForm()
     return render_to_response('cargar_liquidaciones.html', {'form': form}, context_instance=RequestContext(request))
 
+def carga_correcta(request):
+    messages.add_message(request, messages.INFO, "Liquidaciones cargadas Correctamente.")
+    return render_to_response('aviso.html', context_instance=RequestContext(request))
 
 @login_required()
 def obtener_certificado(request):
@@ -244,28 +246,28 @@ def imprimir_liquidacion(request,pk):
         ['','','','','','',''],
         ['','','','HABERES','','',''],
         ['','','','','','',''],
-        ['SUELDO DEL MES','','','','','',liquidacion.sueldo],
-        ['GRATIFICACION','','','','','',liquidacion.gratificacion],
-        ['COMISION PRODUCCION','','','','','',liquidacion.bonos_impon],
-        ['HORAS EXTRAS','','','','','',liquidacion.h_extras],
-        ['TOTAL HABERES IMPONIBLES','','','','','',liquidacion.total_impon],
-        ['ASIGNACION VIATICOS','','','','','',liquidacion.colacion],
-        ['MOVILIZACION COMBUSTIBLE','','','','','',liquidacion.movilizacion],
-        ['TOTAL NO IMPONIBLE','','','','','',liquidacion.total_no_impon],
-        ['TOTAL HABERES','','','','','',liquidacion.total_haberes],
+        ['SUELDO DEL MES','','','','','','$'+'{:,}'.format(liquidacion.sueldo)],
+        ['GRATIFICACION','','','','','','$'+'{:,}'.format(liquidacion.gratificacion)],
+        ['COMISION PRODUCCION','','','','','','$'+'{:,}'.format(liquidacion.bonos_impon)],
+        ['HORAS EXTRAS','','','','','','$'+'{:,}'.format(liquidacion.h_extras)],
+        ['TOTAL HABERES IMPONIBLES','','','','','','$'+'{:,}'.format(liquidacion.total_impon)],
+        ['ASIGNACION VIATICOS','','','','','','$'+'{:,}'.format(liquidacion.colacion)],
+        ['MOVILIZACION COMBUSTIBLE','','','','','','$'+'{:,}'.format(liquidacion.movilizacion)],
+        ['TOTAL NO IMPONIBLE','','','','','','$'+'{:,}'.format(liquidacion.total_no_impon)],
+        ['TOTAL HABERES','','','','','','$'+'{:,}'.format(liquidacion.total_haberes)],
         ['','','','','','',''],
         ['','','','DESCUENTOS','','',''],
         ['','','','','','',''],
-        ['AFP','','','','','',liquidacion.afp],
-        ['SALUD','','','','','',liquidacion.salud],
-        ['SEGURO CESANTIA','','','','','',liquidacion.seg_cesantia],
+        ['AFP','','','','','','$'+'{:,}'.format(liquidacion.afp)],
+        ['SALUD','','','','','','$'+'{:,}'.format(liquidacion.salud)],
+        ['SEGURO CESANTIA','','','','','','$'+'{:,}'.format(liquidacion.seg_cesantia)],
         ['TOTAL DESCUENTOS LEGALES','','','','','',''],
         ['ANTICIPOS','','','','','',''],
-        ['TOTAL OTROS DESCUENTOS','','','','','',liquidacion.otros_dsctos],
-        ['TOTAL DESCUENTOS','','','','','',liquidacion.total_dsctos],
+        ['TOTAL OTROS DESCUENTOS','','','','','','$'+'{:,}'.format(liquidacion.otros_dsctos)],
+        ['TOTAL DESCUENTOS','','','','','','$'+'{:,}'.format(liquidacion.total_dsctos)],
         ['','','','','','',''],
         ['','','','','','',''],
-        ['LIQUIDO A PAGAR','','','','','',liquidacion.liquido_pago],
+        ['LIQUIDO A PAGAR','','','','','','$'+'{:,}'.format(liquidacion.liquido_pago)],
         ['','','','','','',''],
         ['','','','','','',''],
         ['-------------','','','','','','--------------'],
