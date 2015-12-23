@@ -129,15 +129,46 @@ def cargar_liquidaciones(request):
         if form.is_valid():
             reader = csv.reader(request.FILES['docfile'])
             index = 0
-            for index,row in enumerate(reader):
-                if index<7:
-                    if index == 1:
+            for i,row in enumerate(reader):
+                if i<7:
+                    if i == 1:
                         s=row[0]
                         mes_data = s[16:]
+                        l = len(mes_data)
+                        m=mes_data[0:l-5]
+                        m=m.lower()
+                        if m=='enero':
+                            aux='01'
+                        if m=='febrero':
+                            aux='02'
+                        if m=='marzo':
+                            aux='03'
+                        if m=='abril':
+                            aux='04'
+                        if m=='mayo':
+                            aux='05'
+                        if m=='junio':
+                            aux='06'
+                        if m=='julio':
+                            aux='07'
+                        if m=='agosto':
+                            aux='08'
+                        if m=='septiembre':
+                            aux='09'
+                        if m=='octubre':
+                            aux='10'
+                        if m=='noviembre':
+                            aux='11'
+                        if m=='diciembre':
+                            aux='12'
+                        a=mes_data[l-4:l]
+                        orden = a + aux
+
                 else: 
                     liquidaciones = Liquidacion()
                     liquidaciones.Usuario_rut = row[1]
                     liquidaciones.mes = mes_data
+                    liquidaciones.index = orden
                     liquidaciones.zonal = row[2]
                     liquidaciones.c_costo = row[3]
                     liquidaciones.dias = row[4]
@@ -282,7 +313,7 @@ def imprimir_liquidacion(request,pk):
 
 
 
-@permission_required('portal.puede_crear', login_url="/ingresar")
+#@permission_required('portal.puede_crear', login_url="/ingresar")
 def us(request):
     #Esta es una funcion auxiliar, para crear los usuarios iniciales del sistema
     if request.method == 'POST':

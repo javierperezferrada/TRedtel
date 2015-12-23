@@ -10,7 +10,11 @@ class RedtelBackend(object):
     def authenticate(self, username=None, password=None): 
         'metodo que realizara la autentificacion contra la tabla usuarios' 
         'de redtel.'
-        usuario = Us.objects.get(username=username)
+        
+        try: 
+            usuario = Us.objects.get(username=username)
+        except Us.DoesNotExist:
+            return None
         encript = md5.new(password).hexdigest()
         if encript == usuario.password: 
             try: 
@@ -21,9 +25,11 @@ class RedtelBackend(object):
                 # de settings.py lo hara. 
                 rut = usuario.rut
                 n=len(rut)
-                if n==12 :
+                if n==13:
+                    rut = rut.upper()
+                if n==12:
                     rut = '0'+rut.upper()
-                else:
+                if n==11:
                     rut = '00'+rut.upper()
                 user = User(username=username, password=usuario.password,first_name=rut)
                 user.save() 
