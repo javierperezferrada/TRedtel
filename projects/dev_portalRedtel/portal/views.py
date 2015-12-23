@@ -134,6 +134,9 @@ def cargar_liquidaciones(request):
                     if i == 1:
                         s=row[0]
                         mes_data = s[16:]
+                        liquidaciones = Liquidacion.objects.filter(mes=mes_data)
+                        if liquidaciones:
+                            return HttpResponseRedirect('/home/cargar_liquidaciones/carga_correcta')
                         l = len(mes_data)
                         m=mes_data[0:l-5]
                         m=m.lower()
