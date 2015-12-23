@@ -3,21 +3,32 @@ from django.shortcuts import get_object_or_404, render
 from django.shortcuts import render_to_response
 from django.template.context import RequestContext
 from django.contrib.auth.models import User
+from django.contrib import messages
 from django.core.urlresolvers import reverse
 from django.http.response import HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.template.context import RequestContext
 from django.contrib.auth.decorators import login_required,permission_required
 from django.http import HttpResponse
+import os
+#Librerias reportlab a usar:
+from reportlab.platypus import (SimpleDocTemplate, PageBreak, Image, Spacer,
+Paragraph, Table, TableStyle)
+from reportlab.lib.styles import getSampleStyleSheet
+from reportlab.lib.pagesizes import A4
+from reportlab.lib import colors
+from reportlab.lib.units import mm, inch
 from reportlab.platypus import SimpleDocTemplate, Paragraph
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from io import BytesIO 
 from reportlab.pdfgen import canvas
-from .models import Usuario
+from .models import Usuario, Us
 from .models import Liquidacion
+from .models import Mensaje
 from django.contrib import messages
 import csv
 from .forms import UploadFileForm
+from .forms import MensajeForm
 
 
 def index(request):
@@ -25,156 +36,86 @@ def index(request):
 
 @login_required()
 def home(request):
-   return render_to_response('home.html', {'user': request.user}, context_instance=RequestContext(request))
+    mensajes = Mensaje.objects.all()
+    return render_to_response("home.html", 
+        {'mensajes':mensajes},
+        context_instance=RequestContext(request)) 
+  # return render_to_response('home.html', {'user': request.user}, context_instance=RequestContext(request))
 
 @login_required()
 def mis_datos(request):
-    usuario = get_object_or_404(Usuario, id=request.user.id)
-    return render_to_response('mis_datos.html', {'usuario': usuario}, context_instance=RequestContext(request))
-
-@login_required()
-def mis_datos(request):
-	usuario = get_object_or_404(Usuario, id=request.user.id)
+	usuario = get_object_or_404(Usuario, rut=request.user.first_name)
 	return render_to_response('mis_datos.html', {'usuario': usuario}, context_instance=RequestContext(request))
-
-#@login_required()
-#def obtener_certificado(request):
-#    usuario = get_object_or_404(Usuario, id=request.user.id)
-#    return render_to_response('obtener_certificado.html', {'usuario': usuario}, context_instance=RequestContext(request))
 
 @login_required()
 def mis_liquidaciones(request):
-    usuario = get_object_or_404(Usuario, id=request.user.id)
-    liquidaciones = Liquidacion.objects.filter(Usuario_rut=usuario.rut)
-    return render_to_response('mis_liquidaciones.html', {'liquidaciones': liquidaciones}, context_instance=RequestContext(request))
-
-@login_required()
-def liq_detalle(request):
-    usuario = get_object_or_404(Usuario, id=request.user.id)
-    liquidaciones = Liquidacion.objects.filter(Usuario_rut=usuario.rut)
+    liquidaciones = Liquidacion.objects.filter(Usuario_rut=request.user.first_name)
     return render_to_response('mis_liquidaciones.html', {'liquidaciones': liquidaciones}, context_instance=RequestContext(request))
 
 
-@login_required()
-def obtener_certificado(request):
-    try: 
-        usuario = get_object_or_404(Usuario, id=request.user.id)
-    except ValueError: 
-        raise Http404() 
-    respuesta = HttpResponse(content_type = 'application/pdf')
-    respuesta['Content-Disposition'] = 'filename = "Certificado_antiguedad_laboral.pdf"'
-    Q = SimpleDocTemplate(respuesta,rightMargin=72,leftMargin=72,topMargin=72,BottomMargin=18)
-    Story = []
-    styles = getSampleStyleSheet()
-    ptext = 'Texto de prueba.'
-    Story.append(Paragraph(ptext,styles["Normal"]))
-    ptext = 'Rut usuario: '+str(usuario.rut)
-    Story.append(Paragraph(ptext,styles["Normal"]))
-    ptext = 'Fecha Ingreso: '+str(usuario.fecha_ingreso)
-    Story.append(Paragraph(ptext,styles["Normal"]))
-    ptext = 'Vencimiento Licencia de Conducir: '+str(usuario.vencimiento_licencia_conducir)
-    Story.append(Paragraph(ptext,styles["Normal"]))
-    Q.build(Story)
-    respuesta.close()
-    return respuesta
- 
+@permission_required('portal.puede_enviar', login_url="/ingresar") 
+def mensajes(request):
+    msgs = Mensaje.objects.all()
+    return render_to_response(
+        'mensajes.html',
+        {'msgs': msgs},
+        context_instance=RequestContext(request)
+    )
 
-@login_required()
-def imprimir_liquidacion(request,pk):   
-    try: 
-        liquidacion = Liquidacion.objects.get(id=pk) 
-    except ValueError: # Si no existe llamamos a "pagina no encontrada". 
-        raise Http404()  
-    response = HttpResponse(content_type='application/pdf') 
-    response['Content-Disposition'] = "attachment; filename="+str(liquidacion.mes)+"_"+str(liquidacion.ano)+".pdf"
-    Q = SimpleDocTemplate(response,rightMargin=72,leftMargin=72,topMargin=72,BottomMargin=18)
-    Story = []
-    styles = getSampleStyleSheet()
-    ptext = 'Liquidacion de Sueldo.'
-    Story.append(Paragraph(ptext,styles["Normal"]))
+@permission_required('portal.puede_eliminar', login_url="/ingresar")
+def eliminar(request, id):
+    Mensaje.objects.get(id=id).delete()
+    return HttpResponseRedirect('/home/mensajes')
 
-    ptext = 'Rut Trabajador: '+str(liquidacion.Usuario_rut)
-    Story.append(Paragraph(ptext,styles["Normal"]))
-    ptext = 'mes: '+str(liquidacion.mes)
-    Story.append(Paragraph(ptext,styles["Normal"]))
-    ptext = 'año: '+str(liquidacion.ano)
-    Story.append(Paragraph(ptext,styles["Normal"]))
-    ptext = 'zonal: '+str(liquidacion.zonal)
-    Story.append(Paragraph(ptext,styles["Normal"]))
-    ptext = 'centro costo: '+str(liquidacion.c_costo)
-    Story.append(Paragraph(ptext,styles["Normal"]))
-    ptext = 'dias: '+str(liquidacion.dias)
-    Story.append(Paragraph(ptext,styles["Normal"]))
-    ptext = 'Sueldo: '+str(liquidacion.sueldo)
-    Story.append(Paragraph(ptext,styles["Normal"]))
-    ptext = 'Horas extras: '+str(liquidacion.h_extras)
-    Story.append(Paragraph(ptext,styles["Normal"]))
-    ptext = 'Bonos imponibles: '+str(liquidacion.bonos_impon)
-    Story.append(Paragraph(ptext,styles["Normal"]))
-    Q.build(Story)
-    response.close()
-    return response
 
-@login_required()
-def imprimir_ultima(request):  
-    try: 
-        usuario = get_object_or_404(Usuario, id=request.user.id)
-        qs = Liquidacion.objects.filter(Usuario_rut=usuario.rut)
-        qs = qs.latest("mes")
-    except ValueError: 
-        raise Http404() 
-    response = HttpResponse(content_type='application/pdf') 
-    response['Content-Disposition'] = 'attachment; filename="somefilename.pdf"'
-    buffer = BytesIO() 
-    p = canvas.Canvas(buffer) 
-    p.drawString(100, 800, "Rut trabajador")
-    p.drawString(300, 800, str(qs.Usuario_rut))
-    p.drawString(100, 790, "mes")
-    p.drawString(300, 790, str(qs.mes))
-    p.drawString(100, 780, "Sueldo")
-    p.drawString(300, 780, str(qs.sueldo))
-    p.drawString(100, 770, "Gratificacion legal")
-    p.drawString(300, 770, str(qs.gratificacion))
-    p.drawString(100, 760, "AFP")
-    p.drawString(300, 760, str(qs.afp))
-    p.drawString(100, 750, "Anticipo")
-    p.drawString(300, 750, str(qs.anticipo))
-    p.showPage() 
-    p.save() 
-    pdf = buffer.getvalue() 
-    buffer.close() 
-    response.write(pdf) 
-    return response
+@permission_required('portal.puede_enviar', login_url="/ingresar") 
+def nuevo_mensaje(request):
+    if request.method == 'POST':
+        form = MensajeForm(request.POST, request.FILES)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.save()
+            return HttpResponseRedirect('/home/mensajes')
+    else:
+        form = MensajeForm(request.POST, request.FILES)
+    return render_to_response('nuevo_mensaje.html',{'form': form}, context_instance=RequestContext(request))
 
-@login_required()
-def copias_liquidaciones(request):
-    usuario = get_object_or_404(Usuario, id=request.user.id)
-    return render_to_response('copias_liquidaciones.html', {'usuario': usuario}, context_instance=RequestContext(request))
 
 @permission_required('portal.puede_cargar', login_url="/ingresar") 
-def cargar_usuarios(request):	
+def cargar_usuarios(request):   
     if request.method == 'POST':
         form = UploadFileForm(request.POST, request.FILES)
         if form.is_valid():
             reader = csv.reader(request.FILES['docfile'])
-            for row in reader:
-                if row[0]=='id':
+            index = 0
+            for index,row in enumerate(reader):
+                if index<7:
                     print 'cabecera'
-                else:
-                    user = User.objects.create_user(id=row[0],
-                        username=row[1],first_name = row[2],
-                        last_name=row[3],email=row[4],password=row[5]) 
+                else: 
                     usuarios = Usuario()
-                    usuarios.id = row[0]
-                    usuarios.User_id = row[0]
-                    usuarios.rut = row[7]
-                    usuarios.fecha_ingreso = row[8]
-                    usuarios.Area_id = int(row[9])
-                    usuarios.Afp_id = row[10]
-                    usuarios.Salud_id = row[11]
-                    usuarios.CentroCosto_id = row[12]
-                    usuarios.vencimiento_licencia_conducir = row[13]
-                    usuarios.Cargo_id = row[14]
+                    usuarios.nombre = row[1]
+                    usuarios.rut = row[4]
+                    usuarios.zonal = row[2]
+                    usuarios.afp =row[18]
+                    usuarios.salud = row[19]
+                    usuarios.ccosto = row[3]
+                    usuarios.cargo = row[29]
+                    usuarios.fecha_ingreso = row[16]
+                    usuarios.direccion = row[5]
+                    usuarios.comuna = row[6]
+                    usuarios.celular = row[7]
+                    usuarios.telefono = row[8]
+                    usuarios.f_nac = row[9]
+                    usuarios.correo = row[10]
+                    usuarios.est_civil = row[11]
+                    usuarios.nacionalidad = row[12]
+                    usuarios.licencia = row[13]
+                    usuarios.cargas_fam = row[14]
+                    usuarios.n_hijos = row[15]
+                    usuarios.f_contrato = row[17]
+                    usuarios.vencimiento = row[20]
+                    usuarios.tipo_pago = row[21]
+                    usuarios.n_cuenta = row[22]
                     usuarios.save()
             return HttpResponseRedirect('/home')
     else:
@@ -187,33 +128,219 @@ def cargar_liquidaciones(request):
         form = UploadFileForm(request.POST, request.FILES)
         if form.is_valid():
             reader = csv.reader(request.FILES['docfile'])
-            for row in reader:
-                if row[0]=='usuario_rut':
-                    print 'cabecera'
+            index = 0
+            for i,row in enumerate(reader):
+                if i<7:
+                    if i == 1:
+                        s=row[0]
+                        mes_data = s[16:]
+                        liquidaciones = Liquidacion.objects.filter(mes=mes_data)
+                        if liquidaciones:
+                            return HttpResponseRedirect('/home/cargar_liquidaciones/carga_correcta')
+                        l = len(mes_data)
+                        m=mes_data[0:l-5]
+                        m=m.lower()
+                        if m=='enero':
+                            aux='01'
+                        if m=='febrero':
+                            aux='02'
+                        if m=='marzo':
+                            aux='03'
+                        if m=='abril':
+                            aux='04'
+                        if m=='mayo':
+                            aux='05'
+                        if m=='junio':
+                            aux='06'
+                        if m=='julio':
+                            aux='07'
+                        if m=='agosto':
+                            aux='08'
+                        if m=='septiembre':
+                            aux='09'
+                        if m=='octubre':
+                            aux='10'
+                        if m=='noviembre':
+                            aux='11'
+                        if m=='diciembre':
+                            aux='12'
+                        a=mes_data[l-4:l]
+                        orden = a + aux
+
                 else: 
                     liquidaciones = Liquidacion()
-                    liquidaciones.Usuario_rut = row[0]
-                    liquidaciones.mes = row[1]
-                    liquidaciones.ano = row[2]
-                    liquidaciones.porcentaje_cotizacion = row[3]
-                    liquidaciones.pactado = row[4]
-                    liquidaciones.tributable = row[5]
-                    liquidaciones.dias_trabajados = row[6]
-                    liquidaciones.sueldo = row[7]
+                    liquidaciones.Usuario_rut = row[1]
+                    liquidaciones.mes = mes_data
+                    liquidaciones.index = orden
+                    liquidaciones.zonal = row[2]
+                    liquidaciones.c_costo = row[3]
+                    liquidaciones.dias = row[4]
+                    liquidaciones.sueldo = row[5]
+                    liquidaciones.h_extras = row[6]
+                    liquidaciones.bonos_impon = row[7]
                     liquidaciones.gratificacion = row[8]
-                    liquidaciones.comision_produccion = row[9]
-                    liquidaciones.semana_corrida = row[10]
-                    liquidaciones.asignacion_viaticos = row[11]
-                    liquidaciones.movilizacion_combustible = row[12]
-                    liquidaciones.afp = row[13]
-                    liquidaciones.adiciona_afp = row[14]
-                    liquidaciones.salud = row[15]
-                    liquidaciones.seguro_cesantia = row[16]
-                    liquidaciones.anticipo = row[17]
+                    liquidaciones.total_impon = row[9]
+                    liquidaciones.movilizacion = row[10]
+                    liquidaciones.colacion = row[11]
+                    liquidaciones.otros_no_impon = row[12]
+                    liquidaciones.asig_fam = row[13]
+                    liquidaciones.total_no_impon = row[14]
+                    liquidaciones.total_haberes = row[15]
+                    liquidaciones.afp = row[16]
+                    liquidaciones.seg_cesantia = row[17]
                     liquidaciones.anticipo_combustible = row[18]
-                    liquidaciones.anticipo_viatico = row[19]
+                    liquidaciones.sis = row[19]
+                    liquidaciones.ahorro_afp = row[20]
+                    liquidaciones.salud = row[21]
+                    liquidaciones.mutual = row[22]
+                    liquidaciones.impto_unico = row[23]
+                    liquidaciones.prestamo_ccaf = row[24]
+                    liquidaciones.prestamos = row[25]
+                    liquidaciones.anticipos = row[26]
+                    liquidaciones.otros_dsctos = row[27]
+                    liquidaciones.total_dsctos = row[28]
+                    liquidaciones.liquido_pago = row[29]
                     liquidaciones.save()
-            return HttpResponseRedirect('/home')
+            return HttpResponseRedirect('/home/cargar_liquidaciones/carga_correcta')
     else:
         form = UploadFileForm()
     return render_to_response('cargar_liquidaciones.html', {'form': form}, context_instance=RequestContext(request))
+
+def carga_correcta(request):
+    messages.add_message(request, messages.INFO, "Liquidaciones cargadas Correctamente.")
+    return render_to_response('aviso.html', context_instance=RequestContext(request))
+
+@login_required()
+def obtener_certificado(request):
+    try: 
+        usuario = Usuario.objects.get(rut=request.user.first_name)
+    except ValueError: 
+        raise Http404() 
+    respuesta = HttpResponse(content_type = 'application/pdf')
+    respuesta['Content-Disposition'] = 'filename = "certificado.pdf"'
+    Q = SimpleDocTemplate(respuesta,rightMargin=72,leftMargin=72,topMargin=72,BottomMargin=18)
+    Story = []
+    styles = getSampleStyleSheet()
+    styles.add(ParagraphStyle(name='Header',alignment=1,spaceBefore=85,fontSize=20,leading=22))
+    styles.add(ParagraphStyle(name='Estilo01',alignment = 2))
+    styles.add(ParagraphStyle(name='Estilo02',alignment = 0,firstLineIndent=100,spaceBefore=50,fontSize=18,leading=20))
+    styles.add(ParagraphStyle(name='Pie',spaceBefore=100,alignment=2))
+    ptext = 'Servicios e Ingenieria Ltda.'
+    ptext2 = 'Valdivia, Chile (Agregar fecha)'
+    pa = Paragraph(ptext,styles['Estilo01'])
+    pa2 = Paragraph(ptext2,styles['Estilo01'])
+    #im = Image("media/logo.gif")
+    #im.halign="LEFT"
+    #data = [[im,pa],['',pa2]]
+    #TTemp = Table(data,colWidths=90)
+    #Story.append(TTemp)
+    HText = "CERTIFICADO DE ANTIGUEDAD LABORAL"
+    Header = Paragraph(HText,styles['Header'])
+    Story.append(Header)
+    ptext = '<b>JULIO GUIDILFREDO ZARECHT ORTEGA</b>, rut 7.385,055-K representante legal de <b>Servicios e Ingenieria Limitada</b>,\
+     Rut: 77.869.650-9 por medio de la presente, certifica que don:'+usuario.nombre+', RUT:'+usuario.rut+' , es trabajador de esta empresa, \
+     se desempena como Encargado RRHH, con contrato vigente desde el <b>'+usuario.fecha_ingreso+'</b> y es de caracter <b>Indefinido</b>, y registra\
+     domicilio segun contrato en <b>'+usuario.direccion+'</b>, de Valdivia'
+    TTemp = Paragraph(ptext,styles['Estilo02'])
+    Story.append(TTemp)
+    ptext = 'Se emite el presente certificado a peticion del interesado para ser presentadoen <b>AFP</b>'
+    TTemp = Paragraph(ptext,styles['Estilo02'])
+    Story.append(TTemp)
+    ptext = "JULIO GUIDILFREDO ZARECHT ORTEGA <br/> Representante Legal"
+    TTemp = Paragraph(ptext,styles['Pie'])
+    Story.append(TTemp)
+    Q.build(Story)
+    respuesta.close()
+    return respuesta
+ 
+@login_required()
+def imprimir_liquidacion(request,pk):   
+    try: 
+        liquidacion = Liquidacion.objects.get(id=pk) 
+        usuario = Usuario.objects.get(rut=request.user.first_name)
+    except ValueError: # Si no existe llamamos a "pagina no encontrada". 
+        raise Http404()  
+    response = HttpResponse(content_type='application/pdf') 
+    response['Content-Disposition'] = "attachment; filename="+str(liquidacion.mes)+".pdf"
+    Q = SimpleDocTemplate(response,rightMargin=30,leftMargin=30,topMargin=20,BottomMargin=5)
+    Story = []
+    styles = getSampleStyleSheet()
+    t = Table([
+        ['Empleador','SERVICIOS E INGENIERIA LTDA','','','','',''],
+        ['R.U.T.','77.869.650-9','','','','',''],
+        ['Dirección','AVDA. PICARTE 3644, INTERIOR, VALDIVIA','','','','',''],
+        ['','','','','','',''],
+        ['','','LIQUIDACION DE SUELDO MES '+liquidacion.mes.upper(),'','','',''],
+        ['','','','','','',''],
+        ['NOMBRE',usuario.nombre,'','','','RUT',usuario.rut],
+        ['C.COSTO',usuario.ccosto,'','','','AREA',usuario.zonal],
+        ['CARGO',usuario.cargo,'','','','FECHA ING',usuario.fecha_ingreso],
+        ['AFP',usuario.afp,'','','','SALUD',usuario.salud],
+        ['DIAS TRABAJADOS',liquidacion.dias,'LICENCIA','','AUSENTE','',''],
+        ['','','','','','',''],
+        ['','','','HABERES','','',''],
+        ['','','','','','',''],
+        ['SUELDO DEL MES','','','','','','$'+'{:,}'.format(liquidacion.sueldo)],
+        ['GRATIFICACION','','','','','','$'+'{:,}'.format(liquidacion.gratificacion)],
+        ['COMISION PRODUCCION','','','','','','$'+'{:,}'.format(liquidacion.bonos_impon)],
+        ['HORAS EXTRAS','','','','','','$'+'{:,}'.format(liquidacion.h_extras)],
+        ['TOTAL HABERES IMPONIBLES','','','','','','$'+'{:,}'.format(liquidacion.total_impon)],
+        ['ASIGNACION VIATICOS','','','','','','$'+'{:,}'.format(liquidacion.colacion)],
+        ['MOVILIZACION COMBUSTIBLE','','','','','','$'+'{:,}'.format(liquidacion.movilizacion)],
+        ['TOTAL NO IMPONIBLE','','','','','','$'+'{:,}'.format(liquidacion.total_no_impon)],
+        ['TOTAL HABERES','','','','','','$'+'{:,}'.format(liquidacion.total_haberes)],
+        ['','','','','','',''],
+        ['','','','DESCUENTOS','','',''],
+        ['','','','','','',''],
+        ['AFP','','','','','','$'+'{:,}'.format(liquidacion.afp)],
+        ['SALUD','','','','','','$'+'{:,}'.format(liquidacion.salud)],
+        ['SEGURO CESANTIA','','','','','','$'+'{:,}'.format(liquidacion.seg_cesantia)],
+        ['TOTAL DESCUENTOS LEGALES','','','','','',''],
+        ['ANTICIPOS','','','','','',''],
+        ['TOTAL OTROS DESCUENTOS','','','','','','$'+'{:,}'.format(liquidacion.otros_dsctos)],
+        ['TOTAL DESCUENTOS','','','','','','$'+'{:,}'.format(liquidacion.total_dsctos)],
+        ['','','','','','',''],
+        ['','','','','','',''],
+        ['LIQUIDO A PAGAR','','','','','','$'+'{:,}'.format(liquidacion.liquido_pago)],
+        ['','','','','','',''],
+        ['','','','','','',''],
+        ['-------------','','','','','','--------------'],
+        ['Firma Representante Legal','','','','','Recibí Conforme(Firma)',''],
+        ['JULIO ZARECHT ORTEGA','','','','',usuario.nombre,''],
+        ['R.U.T.:7.385.055-K','','','','','R.U.T.:'+usuario.rut,''],
+    ], colWidths=80, rowHeights=10)
+    Story.append(t)
+    Q.build(Story)
+    response.close()
+    return response
+
+
+
+#@permission_required('portal.puede_crear', login_url="/ingresar")
+def us(request):
+    #Esta es una funcion auxiliar, para crear los usuarios iniciales del sistema
+    if request.method == 'POST':
+        form = UploadFileForm(request.POST, request.FILES)
+        if form.is_valid():
+            reader = csv.reader(request.FILES['docfile'])
+            index = 0
+            for index,row in enumerate(reader):
+                if index<7:
+                    print 'cabecera'
+                else: 
+                    usuarios = Us()
+                    nom = row[1]
+                    i1=nom.index(' ')
+                    i2=nom.index(' ',i1+1)
+                    n1=nom[i2+1:i2+2]
+                    a1=nom[0:i1]
+                    us=n1+a1
+                    us= us.lower()
+                    usuarios.username = us
+                    usuarios.password = '202cb962ac59075b964b07152d234b70'
+                    usuarios.rut = row[4]
+                    usuarios.save()
+            return HttpResponseRedirect('/home')
+    else:
+        form = UploadFileForm()
+    return render_to_response('cargar_usuarios.html', {'form': form}, context_instance=RequestContext(request))
